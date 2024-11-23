@@ -383,7 +383,7 @@
             label1.BackColor = Color.RoyalBlue;
             label1.Font = new Font("Microsoft Sans Serif", 40F);
             label1.ForeColor = Color.PaleTurquoise;
-            label1.Location = new Point(135, 56);
+            label1.Location = new Point(135, 55);
             label1.Name = "label1";
             label1.Size = new Size(536, 63);
             label1.TabIndex = 1;
