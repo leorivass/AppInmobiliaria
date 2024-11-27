@@ -1,3 +1,5 @@
+using Presentation;
+
 namespace AppInmobiliaria
 {
     public partial class Menu : Form
@@ -5,6 +7,13 @@ namespace AppInmobiliaria
         public Menu()
         {
             InitializeComponent();
+        }
+
+        private void crearFicha_Click(object sender, EventArgs e)
+        {
+           CrearFicha crearficha = new CrearFicha();
+            crearficha.ShowDialog();
+
         }
     }
 }

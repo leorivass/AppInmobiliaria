@@ -37,13 +37,6 @@
             pictureBox10 = new PictureBox();
             materialButton1 = new MaterialSkin.Controls.MaterialButton();
             pictureBox4 = new PictureBox();
-            panel1 = new Panel();
-            label1 = new Label();
-            materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
-            tabPage3 = new TabPage();
-            panel3 = new Panel();
-            label3 = new Label();
-            materialTabSelector3 = new MaterialSkin.Controls.MaterialTabSelector();
             materialCard8 = new MaterialSkin.Controls.MaterialCard();
             pictureBox5 = new PictureBox();
             pictureBox9 = new PictureBox();
@@ -54,9 +47,10 @@
             pictureBox14 = new PictureBox();
             materialButton3 = new MaterialSkin.Controls.MaterialButton();
             pictureBox15 = new PictureBox();
-            panel2 = new Panel();
-            materialTabSelector2 = new MaterialSkin.Controls.MaterialTabSelector();
-            label2 = new Label();
+            panel1 = new Panel();
+            crearFicha = new PictureBox();
+            label1 = new Label();
+            materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             tabPage2 = new TabPage();
             flowLayoutPanel2 = new FlowLayoutPanel();
             materialCard2 = new MaterialSkin.Controls.MaterialCard();
@@ -74,6 +68,10 @@
             pictureBox17 = new PictureBox();
             materialButton6 = new MaterialSkin.Controls.MaterialButton();
             pictureBox18 = new PictureBox();
+            panel2 = new Panel();
+            label2 = new Label();
+            materialTabSelector2 = new MaterialSkin.Controls.MaterialTabSelector();
+            tabPage3 = new TabPage();
             flowLayoutPanel3 = new FlowLayoutPanel();
             materialCard5 = new MaterialSkin.Controls.MaterialCard();
             pictureBox19 = new PictureBox();
@@ -90,6 +88,9 @@
             pictureBox26 = new PictureBox();
             materialButton9 = new MaterialSkin.Controls.MaterialButton();
             pictureBox27 = new PictureBox();
+            panel3 = new Panel();
+            label3 = new Label();
+            materialTabSelector3 = new MaterialSkin.Controls.MaterialTabSelector();
             materialTabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
@@ -97,9 +98,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            panel1.SuspendLayout();
-            tabPage3.SuspendLayout();
-            panel3.SuspendLayout();
             materialCard8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
@@ -108,7 +106,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
-            panel2.SuspendLayout();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)crearFicha).BeginInit();
             tabPage2.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
             materialCard2.SuspendLayout();
@@ -123,6 +122,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox18).BeginInit();
+            panel2.SuspendLayout();
+            tabPage3.SuspendLayout();
             flowLayoutPanel3.SuspendLayout();
             materialCard5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox19).BeginInit();
@@ -136,6 +137,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox25).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox26).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox27).BeginInit();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // materialTabControl1
@@ -246,90 +248,6 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 4;
             pictureBox4.TabStop = false;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.RoyalBlue;
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(materialTabSelector1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(3, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(797, 184);
-            panel1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.RoyalBlue;
-            label1.Font = new Font("Microsoft Sans Serif", 40F);
-            label1.ForeColor = Color.PaleTurquoise;
-            label1.Location = new Point(135, 70);
-            label1.Name = "label1";
-            label1.Size = new Size(536, 63);
-            label1.TabIndex = 1;
-            label1.Text = "Seleccione su oficina";
-            // 
-            // materialTabSelector1
-            // 
-            materialTabSelector1.BaseTabControl = materialTabControl1;
-            materialTabSelector1.CharacterCasing = MaterialSkin.Controls.MaterialTabSelector.CustomCharacterCasing.Normal;
-            materialTabSelector1.Depth = 0;
-            materialTabSelector1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTabSelector1.Location = new Point(135, 136);
-            materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialTabSelector1.Name = "materialTabSelector1";
-            materialTabSelector1.Size = new Size(535, 48);
-            materialTabSelector1.TabIndex = 0;
-            materialTabSelector1.Text = "materialTabSelector1";
-            // 
-            // tabPage3
-            // 
-            tabPage3.Controls.Add(flowLayoutPanel3);
-            tabPage3.Controls.Add(panel3);
-            tabPage3.Location = new Point(4, 24);
-            tabPage3.Name = "tabPage3";
-            tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(803, 501);
-            tabPage3.TabIndex = 2;
-            tabPage3.Text = "San Cristóbal";
-            tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.RoyalBlue;
-            panel3.Controls.Add(label3);
-            panel3.Controls.Add(materialTabSelector3);
-            panel3.Dock = DockStyle.Top;
-            panel3.Location = new Point(3, 3);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(797, 184);
-            panel3.TabIndex = 27;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.RoyalBlue;
-            label3.Font = new Font("Microsoft Sans Serif", 40F);
-            label3.ForeColor = Color.PaleTurquoise;
-            label3.Location = new Point(135, 70);
-            label3.Name = "label3";
-            label3.Size = new Size(536, 63);
-            label3.TabIndex = 1;
-            label3.Text = "Seleccione su oficina";
-            // 
-            // materialTabSelector3
-            // 
-            materialTabSelector3.BaseTabControl = materialTabControl1;
-            materialTabSelector3.CharacterCasing = MaterialSkin.Controls.MaterialTabSelector.CustomCharacterCasing.Normal;
-            materialTabSelector3.Depth = 0;
-            materialTabSelector3.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTabSelector3.Location = new Point(135, 136);
-            materialTabSelector3.MouseState = MaterialSkin.MouseState.HOVER;
-            materialTabSelector3.Name = "materialTabSelector3";
-            materialTabSelector3.Size = new Size(535, 48);
-            materialTabSelector3.TabIndex = 0;
-            materialTabSelector3.Text = "materialTabSelector3";
             // 
             // materialCard8
             // 
@@ -471,41 +389,56 @@
             pictureBox15.TabIndex = 4;
             pictureBox15.TabStop = false;
             // 
-            // panel2
+            // panel1
             // 
-            panel2.BackColor = Color.RoyalBlue;
-            panel2.Controls.Add(label2);
-            panel2.Controls.Add(materialTabSelector2);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(3, 3);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(797, 184);
-            panel2.TabIndex = 18;
+            panel1.BackColor = Color.RoyalBlue;
+            panel1.Controls.Add(crearFicha);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(materialTabSelector1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(3, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(797, 184);
+            panel1.TabIndex = 2;
             // 
-            // materialTabSelector2
+            // crearFicha
             // 
-            materialTabSelector2.BaseTabControl = materialTabControl1;
-            materialTabSelector2.CharacterCasing = MaterialSkin.Controls.MaterialTabSelector.CustomCharacterCasing.Normal;
-            materialTabSelector2.Depth = 0;
-            materialTabSelector2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTabSelector2.Location = new Point(135, 136);
-            materialTabSelector2.MouseState = MaterialSkin.MouseState.HOVER;
-            materialTabSelector2.Name = "materialTabSelector2";
-            materialTabSelector2.Size = new Size(535, 48);
-            materialTabSelector2.TabIndex = 0;
-            materialTabSelector2.Text = "materialTabSelector2";
+            crearFicha.BackColor = Color.RoyalBlue;
+            crearFicha.BorderStyle = BorderStyle.FixedSingle;
+            crearFicha.Cursor = Cursors.Hand;
+            crearFicha.Image = (Image)resources.GetObject("crearFicha.Image");
+            crearFicha.Location = new Point(711, 146);
+            crearFicha.Name = "crearFicha";
+            crearFicha.Size = new Size(50, 32);
+            crearFicha.SizeMode = PictureBoxSizeMode.Zoom;
+            crearFicha.TabIndex = 23;
+            crearFicha.TabStop = false;
+            crearFicha.Click += crearFicha_Click;
             // 
-            // label2
+            // label1
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.RoyalBlue;
-            label2.Font = new Font("Microsoft Sans Serif", 40F);
-            label2.ForeColor = Color.PaleTurquoise;
-            label2.Location = new Point(135, 70);
-            label2.Name = "label2";
-            label2.Size = new Size(536, 63);
-            label2.TabIndex = 1;
-            label2.Text = "Seleccione su oficina";
+            label1.AutoSize = true;
+            label1.BackColor = Color.RoyalBlue;
+            label1.Font = new Font("Microsoft Sans Serif", 40F);
+            label1.ForeColor = Color.PaleTurquoise;
+            label1.Location = new Point(135, 70);
+            label1.Name = "label1";
+            label1.Size = new Size(536, 63);
+            label1.TabIndex = 1;
+            label1.Text = "Seleccione su oficina";
+            // 
+            // materialTabSelector1
+            // 
+            materialTabSelector1.BaseTabControl = materialTabControl1;
+            materialTabSelector1.CharacterCasing = MaterialSkin.Controls.MaterialTabSelector.CustomCharacterCasing.Normal;
+            materialTabSelector1.Depth = 0;
+            materialTabSelector1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialTabSelector1.Location = new Point(135, 136);
+            materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialTabSelector1.Name = "materialTabSelector1";
+            materialTabSelector1.Size = new Size(535, 48);
+            materialTabSelector1.TabIndex = 0;
+            materialTabSelector1.Text = "materialTabSelector1";
             // 
             // tabPage2
             // 
@@ -741,6 +674,54 @@
             pictureBox18.TabIndex = 4;
             pictureBox18.TabStop = false;
             // 
+            // panel2
+            // 
+            panel2.BackColor = Color.RoyalBlue;
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(materialTabSelector2);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(3, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(797, 184);
+            panel2.TabIndex = 18;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.RoyalBlue;
+            label2.Font = new Font("Microsoft Sans Serif", 40F);
+            label2.ForeColor = Color.PaleTurquoise;
+            label2.Location = new Point(135, 70);
+            label2.Name = "label2";
+            label2.Size = new Size(536, 63);
+            label2.TabIndex = 1;
+            label2.Text = "Seleccione su oficina";
+            // 
+            // materialTabSelector2
+            // 
+            materialTabSelector2.BaseTabControl = materialTabControl1;
+            materialTabSelector2.CharacterCasing = MaterialSkin.Controls.MaterialTabSelector.CustomCharacterCasing.Normal;
+            materialTabSelector2.Depth = 0;
+            materialTabSelector2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialTabSelector2.Location = new Point(135, 136);
+            materialTabSelector2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialTabSelector2.Name = "materialTabSelector2";
+            materialTabSelector2.Size = new Size(535, 48);
+            materialTabSelector2.TabIndex = 0;
+            materialTabSelector2.Text = "materialTabSelector2";
+            // 
+            // tabPage3
+            // 
+            tabPage3.Controls.Add(flowLayoutPanel3);
+            tabPage3.Controls.Add(panel3);
+            tabPage3.Location = new Point(4, 24);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Padding = new Padding(3);
+            tabPage3.Size = new Size(803, 501);
+            tabPage3.TabIndex = 2;
+            tabPage3.Text = "San Cristóbal";
+            tabPage3.UseVisualStyleBackColor = true;
+            // 
             // flowLayoutPanel3
             // 
             flowLayoutPanel3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -963,6 +944,42 @@
             pictureBox27.TabIndex = 4;
             pictureBox27.TabStop = false;
             // 
+            // panel3
+            // 
+            panel3.BackColor = Color.RoyalBlue;
+            panel3.Controls.Add(label3);
+            panel3.Controls.Add(materialTabSelector3);
+            panel3.Dock = DockStyle.Top;
+            panel3.Location = new Point(3, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(797, 184);
+            panel3.TabIndex = 27;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.RoyalBlue;
+            label3.Font = new Font("Microsoft Sans Serif", 40F);
+            label3.ForeColor = Color.PaleTurquoise;
+            label3.Location = new Point(135, 70);
+            label3.Name = "label3";
+            label3.Size = new Size(536, 63);
+            label3.TabIndex = 1;
+            label3.Text = "Seleccione su oficina";
+            // 
+            // materialTabSelector3
+            // 
+            materialTabSelector3.BaseTabControl = materialTabControl1;
+            materialTabSelector3.CharacterCasing = MaterialSkin.Controls.MaterialTabSelector.CustomCharacterCasing.Normal;
+            materialTabSelector3.Depth = 0;
+            materialTabSelector3.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialTabSelector3.Location = new Point(135, 136);
+            materialTabSelector3.MouseState = MaterialSkin.MouseState.HOVER;
+            materialTabSelector3.Name = "materialTabSelector3";
+            materialTabSelector3.Size = new Size(535, 48);
+            materialTabSelector3.TabIndex = 0;
+            materialTabSelector3.Text = "materialTabSelector3";
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -981,11 +998,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            tabPage3.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
             materialCard8.ResumeLayout(false);
             materialCard8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
@@ -996,8 +1008,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)crearFicha).EndInit();
             tabPage2.ResumeLayout(false);
             flowLayoutPanel2.ResumeLayout(false);
             materialCard2.ResumeLayout(false);
@@ -1015,6 +1028,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox18).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            tabPage3.ResumeLayout(false);
             flowLayoutPanel3.ResumeLayout(false);
             materialCard5.ResumeLayout(false);
             materialCard5.PerformLayout();
@@ -1031,6 +1047,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox25).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox26).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox27).EndInit();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -1097,5 +1115,6 @@
         private PictureBox pictureBox26;
         private MaterialSkin.Controls.MaterialButton materialButton9;
         private PictureBox pictureBox27;
+        private PictureBox crearFicha;
     }
 }
