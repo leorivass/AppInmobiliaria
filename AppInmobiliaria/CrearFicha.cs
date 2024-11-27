@@ -12,9 +12,10 @@ namespace Presentation
 {
     public partial class CrearFicha : Form
     {
-        public CrearFicha()
+        public CrearFicha(string oficina)
         {
             InitializeComponent();
+            label3.Text = label3.Text + " " + oficina;
         }
 
         private void cancelar_Click(object sender, EventArgs e)

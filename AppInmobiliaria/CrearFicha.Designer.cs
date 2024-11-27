@@ -49,6 +49,8 @@
             subirImagen = new MaterialSkin.Controls.MaterialButton();
             materialCard8 = new MaterialSkin.Controls.MaterialCard();
             pictureBox12 = new PictureBox();
+            label3 = new Label();
+            panel1.SuspendLayout();
             panel3.SuspendLayout();
             materialCard3.SuspendLayout();
             materialCard2.SuspendLayout();
@@ -60,6 +62,7 @@
             // panel1
             // 
             panel1.BackColor = Color.RoyalBlue;
+            panel1.Controls.Add(label3);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -439,6 +442,16 @@
             pictureBox12.TabIndex = 4;
             pictureBox12.TabStop = false;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Yu Gothic UI Semibold", 30F);
+            label3.Location = new Point(23, 24);
+            label3.Name = "label3";
+            label3.Size = new Size(205, 54);
+            label3.TabIndex = 0;
+            label3.Text = "Oficina de";
+            // 
             // CrearFicha
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -451,6 +464,8 @@
             Name = "CrearFicha";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CrearFicha";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             panel3.ResumeLayout(false);
             materialCard3.ResumeLayout(false);
             materialCard3.PerformLayout();
@@ -485,5 +500,6 @@
         private MaterialSkin.Controls.MaterialComboBox tipoLocal;
         private MaterialSkin.Controls.MaterialButton cancelar;
         private MaterialSkin.Controls.MaterialButton continuar;
+        private Label label3;
     }
 }

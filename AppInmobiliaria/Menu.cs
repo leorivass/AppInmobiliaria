@@ -11,7 +11,7 @@ namespace AppInmobiliaria
 
         private void crearFicha_Click(object sender, EventArgs e)
         {
-           CrearFicha crearficha = new CrearFicha();
+           CrearFicha crearficha = new CrearFicha("Santo Domingo");
             crearficha.ShowDialog();
 
         }
