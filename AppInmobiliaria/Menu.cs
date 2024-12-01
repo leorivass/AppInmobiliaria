@@ -11,9 +11,14 @@ namespace AppInmobiliaria
 
         private void crearFicha_Click(object sender, EventArgs e)
         {
-           CrearFicha crearficha = new CrearFicha("Santo Domingo");
-            crearficha.ShowDialog();
+            AñadirInmueble añadirinmueble = new AñadirInmueble();
+            añadirinmueble.ShowDialog();
+        }
 
+        private void materialButton4_Click(object sender, EventArgs e)
+        {
+            AñadirPropietario añadirpropietario = new AñadirPropietario();
+            añadirpropietario.ShowDialog();
         }
     }
 }

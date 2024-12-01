@@ -10,15 +10,13 @@ using System.Windows.Forms;
 
 namespace Presentation
 {
-    public partial class CrearFicha : Form
+    public partial class AñadirPropietario : Form
     {
-        public CrearFicha(string oficina)
+        public AñadirPropietario()
         {
             InitializeComponent();
-            label3.Text = label3.Text + " " + oficina;
         }
-
-        private void cancelar_Click(object sender, EventArgs e)
+        private void cancelarButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
