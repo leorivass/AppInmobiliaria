@@ -23,8 +23,8 @@ namespace AppInmobiliaria
 
         private void materialButton9_Click(object sender, EventArgs e)
         {
-            AñadirInmueble añadirInmueble = new AñadirInmueble();
-            añadirInmueble.ShowDialog();
+            anadiroficina añadiroficina = new anadiroficina();
+            añadiroficina.ShowDialog();
         }
     }
 }

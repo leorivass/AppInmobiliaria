@@ -156,7 +156,8 @@
             Controls.Add(telefonoPropietario);
             Controls.Add(nombrePropietario);
             Name = "anadiroficina";
-            Text = "Añadir Oficina";
+            Text = "AñadirOficina";
+            Load += anadiroficina_Load;
             ResumeLayout(false);
             PerformLayout();
         }

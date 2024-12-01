@@ -26,5 +26,10 @@ namespace Presentation
         {
             this.Close();
         }
+
+        private void anadiroficina_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
