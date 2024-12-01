@@ -760,6 +760,7 @@
             materialButton9.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             materialButton9.UseAccentColor = false;
             materialButton9.UseVisualStyleBackColor = true;
+            materialButton9.Click += materialButton9_Click;
             // 
             // panel3
             // 

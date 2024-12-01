@@ -101,6 +101,7 @@
             finalizarButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             finalizarButton.UseAccentColor = false;
             finalizarButton.UseVisualStyleBackColor = true;
+            finalizarButton.Click += finalizarButton_Click;
             // 
             // materialTextBox22
             // 
@@ -247,9 +248,9 @@
         private MaterialSkin.Controls.MaterialTextBox2 telefonoPropietario;
         private MaterialSkin.Controls.MaterialTextBox2 nombrePropietario;
         private Label label1;
-        private MaterialSkin.Controls.MaterialTextBox2 materialTextBox22;
-        private MaterialSkin.Controls.MaterialTextBox2 materialTextBox21;
         private MaterialSkin.Controls.MaterialButton cancelarButton;
         private MaterialSkin.Controls.MaterialButton finalizarButton;
+        private MaterialSkin.Controls.MaterialTextBox2 materialTextBox22;
+        private MaterialSkin.Controls.MaterialTextBox2 materialTextBox21;
     }
 }

@@ -10,20 +10,21 @@ using System.Windows.Forms;
 
 namespace Presentation
 {
-    public partial class AñadirPropietario : Form
+    public partial class anadiroficina : Form
     {
-        public AñadirPropietario()
+        public anadiroficina()
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void cancelarButton_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void finalizarButton_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

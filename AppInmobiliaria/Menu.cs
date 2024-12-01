@@ -20,5 +20,11 @@ namespace AppInmobiliaria
             AñadirPropietario añadirpropietario = new AñadirPropietario();
             añadirpropietario.ShowDialog();
         }
+
+        private void materialButton9_Click(object sender, EventArgs e)
+        {
+            AñadirInmueble añadirInmueble = new AñadirInmueble();
+            añadirInmueble.ShowDialog();
+        }
     }
 }
