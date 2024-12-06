@@ -102,20 +102,13 @@
             panel9 = new Panel();
             label42 = new Label();
             pictureBox7 = new PictureBox();
-            materialCard8 = new MaterialSkin.Controls.MaterialCard();
-            label43 = new Label();
-            label44 = new Label();
-            label45 = new Label();
-            label46 = new Label();
-            label47 = new Label();
-            panel10 = new Panel();
-            label48 = new Label();
-            pictureBox8 = new PictureBox();
             panel4 = new Panel();
             panel3 = new Panel();
             añadirInmuebleButton = new PictureBox();
-            label49 = new Label();
+            oficinaComboBox = new ComboBox();
+            label43 = new Label();
             filtroComboBox = new ComboBox();
+            label49 = new Label();
             materialTabSelector3 = new MaterialSkin.Controls.MaterialTabSelector();
             tabPage3 = new TabPage();
             panel15 = new Panel();
@@ -153,9 +146,6 @@
             materialCard7.SuspendLayout();
             panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            materialCard8.SuspendLayout();
-            panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)añadirInmuebleButton).BeginInit();
             tabPage3.SuspendLayout();
@@ -305,7 +295,6 @@
             inmueblesLayoutPanel.Controls.Add(materialCard5);
             inmueblesLayoutPanel.Controls.Add(materialCard6);
             inmueblesLayoutPanel.Controls.Add(materialCard7);
-            inmueblesLayoutPanel.Controls.Add(materialCard8);
             inmueblesLayoutPanel.Dock = DockStyle.Fill;
             inmueblesLayoutPanel.Location = new Point(0, 100);
             inmueblesLayoutPanel.Name = "inmueblesLayoutPanel";
@@ -1019,107 +1008,6 @@
             pictureBox7.TabIndex = 0;
             pictureBox7.TabStop = false;
             // 
-            // materialCard8
-            // 
-            materialCard8.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard8.Controls.Add(label43);
-            materialCard8.Controls.Add(label44);
-            materialCard8.Controls.Add(label45);
-            materialCard8.Controls.Add(label46);
-            materialCard8.Controls.Add(label47);
-            materialCard8.Controls.Add(panel10);
-            materialCard8.Controls.Add(pictureBox8);
-            materialCard8.Cursor = Cursors.Hand;
-            materialCard8.Depth = 0;
-            materialCard8.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard8.Location = new Point(782, 348);
-            materialCard8.Margin = new Padding(14);
-            materialCard8.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCard8.Name = "materialCard8";
-            materialCard8.Padding = new Padding(14);
-            materialCard8.Size = new Size(228, 306);
-            materialCard8.TabIndex = 7;
-            // 
-            // label43
-            // 
-            label43.AutoSize = true;
-            label43.Font = new Font("Lucida Fax", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label43.ForeColor = Color.Red;
-            label43.Location = new Point(84, 282);
-            label43.Name = "label43";
-            label43.Size = new Size(63, 14);
-            label43.TabIndex = 6;
-            label43.Text = "Ref. 0000";
-            // 
-            // label44
-            // 
-            label44.AutoSize = true;
-            label44.Font = new Font("Lucida Fax", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label44.Location = new Point(94, 255);
-            label44.Name = "label44";
-            label44.Size = new Size(91, 18);
-            label44.TabIndex = 5;
-            label44.Text = "RD$80000";
-            // 
-            // label45
-            // 
-            label45.AutoSize = true;
-            label45.Font = new Font("Lucida Fax", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label45.Location = new Point(73, 227);
-            label45.Name = "label45";
-            label45.Size = new Size(121, 18);
-            label45.TabIndex = 4;
-            label45.Text = "RD$15000000";
-            // 
-            // label46
-            // 
-            label46.AutoSize = true;
-            label46.Font = new Font("Lucida Fax", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label46.Location = new Point(13, 255);
-            label46.Name = "label46";
-            label46.Size = new Size(83, 18);
-            label46.TabIndex = 3;
-            label46.Text = "Alquiler:";
-            // 
-            // label47
-            // 
-            label47.AutoSize = true;
-            label47.Font = new Font("Lucida Fax", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label47.Location = new Point(13, 227);
-            label47.Name = "label47";
-            label47.Size = new Size(62, 18);
-            label47.TabIndex = 2;
-            label47.Text = "Venta:";
-            // 
-            // panel10
-            // 
-            panel10.BackColor = Color.LightSteelBlue;
-            panel10.Controls.Add(label48);
-            panel10.Location = new Point(0, 0);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(228, 47);
-            panel10.TabIndex = 1;
-            // 
-            // label48
-            // 
-            label48.AutoSize = true;
-            label48.Font = new Font("Lucida Fax", 15F, FontStyle.Bold);
-            label48.Location = new Point(82, 12);
-            label48.Name = "label48";
-            label48.Size = new Size(65, 23);
-            label48.TabIndex = 3;
-            label48.Text = "Local";
-            // 
-            // pictureBox8
-            // 
-            pictureBox8.Image = Properties.Resources.apt1;
-            pictureBox8.Location = new Point(0, 38);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(228, 177);
-            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox8.TabIndex = 0;
-            pictureBox8.TabStop = false;
-            // 
             // panel4
             // 
             panel4.BackColor = Color.RoyalBlue;
@@ -1133,8 +1021,10 @@
             // 
             panel3.BackColor = Color.RoyalBlue;
             panel3.Controls.Add(añadirInmuebleButton);
-            panel3.Controls.Add(label49);
+            panel3.Controls.Add(oficinaComboBox);
+            panel3.Controls.Add(label43);
             panel3.Controls.Add(filtroComboBox);
+            panel3.Controls.Add(label49);
             panel3.Controls.Add(materialTabSelector3);
             panel3.Dock = DockStyle.Top;
             panel3.Location = new Point(0, 0);
@@ -1146,7 +1036,7 @@
             // 
             añadirInmuebleButton.Cursor = Cursors.Hand;
             añadirInmuebleButton.Image = Properties.Resources.add_3179965;
-            añadirInmuebleButton.Location = new Point(100, 57);
+            añadirInmuebleButton.Location = new Point(96, 57);
             añadirInmuebleButton.Name = "añadirInmuebleButton";
             añadirInmuebleButton.Size = new Size(43, 40);
             añadirInmuebleButton.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1154,15 +1044,29 @@
             añadirInmuebleButton.TabStop = false;
             añadirInmuebleButton.Click += añadirInmuebleButton_Click;
             // 
-            // label49
+            // oficinaComboBox
             // 
-            label49.AutoSize = true;
-            label49.Font = new Font("Lucida Fax", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label49.Location = new Point(864, 51);
-            label49.Name = "label49";
-            label49.Size = new Size(85, 17);
-            label49.TabIndex = 4;
-            label49.Text = "Filtrar por";
+            oficinaComboBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            oficinaComboBox.AutoCompleteSource = AutoCompleteSource.ListItems;
+            oficinaComboBox.Cursor = Cursors.Hand;
+            oficinaComboBox.FlatStyle = FlatStyle.Flat;
+            oficinaComboBox.Font = new Font("Lucida Fax", 9F);
+            oficinaComboBox.FormattingEnabled = true;
+            oficinaComboBox.Items.AddRange(new object[] { "Local", "Casa", "Piso", "Villa" });
+            oficinaComboBox.Location = new Point(804, 71);
+            oficinaComboBox.Name = "oficinaComboBox";
+            oficinaComboBox.Size = new Size(88, 23);
+            oficinaComboBox.TabIndex = 8;
+            // 
+            // label43
+            // 
+            label43.AutoSize = true;
+            label43.Font = new Font("Lucida Fax", 11F, FontStyle.Bold);
+            label43.Location = new Point(815, 51);
+            label43.Name = "label43";
+            label43.Size = new Size(65, 17);
+            label43.TabIndex = 7;
+            label43.Text = "Oficina";
             // 
             // filtroComboBox
             // 
@@ -1171,10 +1075,20 @@
             filtroComboBox.Font = new Font("Lucida Fax", 9F);
             filtroComboBox.FormattingEnabled = true;
             filtroComboBox.Items.AddRange(new object[] { "Local", "Casa", "Piso", "Villa" });
-            filtroComboBox.Location = new Point(846, 71);
+            filtroComboBox.Location = new Point(916, 71);
             filtroComboBox.Name = "filtroComboBox";
-            filtroComboBox.Size = new Size(121, 23);
+            filtroComboBox.Size = new Size(88, 23);
             filtroComboBox.TabIndex = 2;
+            // 
+            // label49
+            // 
+            label49.AutoSize = true;
+            label49.Font = new Font("Lucida Fax", 11F, FontStyle.Bold);
+            label49.Location = new Point(916, 51);
+            label49.Name = "label49";
+            label49.Size = new Size(88, 17);
+            label49.TabIndex = 6;
+            label49.Text = "Filtrar por";
             // 
             // materialTabSelector3
             // 
@@ -1346,11 +1260,6 @@
             panel9.ResumeLayout(false);
             panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            materialCard8.ResumeLayout(false);
-            materialCard8.PerformLayout();
-            panel10.ResumeLayout(false);
-            panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)añadirInmuebleButton).EndInit();
@@ -1429,28 +1338,17 @@
         private MaterialSkin.Controls.MaterialCard materialCard7;
         private Label label37;
         private Label label38;
-        private Label label39;
         private Label label40;
         private Label label41;
         private Panel panel9;
         private Label label42;
         private PictureBox pictureBox7;
-        private MaterialSkin.Controls.MaterialCard materialCard8;
-        private Label label43;
-        private Label label44;
-        private Label label45;
-        private Label label46;
-        private Label label47;
-        private Panel panel10;
-        private Label label48;
-        private PictureBox pictureBox8;
         private Panel panel11;
         private MaterialSkin.Controls.MaterialTabSelector materialTabSelector1;
         private MaterialSkin.Controls.MaterialTabSelector materialTabSelector3;
         private Panel panel14;
         private Panel panel12;
         private MaterialSkin.Controls.MaterialTabSelector materialTabSelector2;
-        private Label label49;
         private ComboBox filtroComboBox;
         private PictureBox añadirInmuebleButton;
         private Panel panel16;
@@ -1461,5 +1359,9 @@
         private MaterialSkin.Controls.MaterialButton eliminarOficinaButton;
         private DataGridView oficinasGridView;
         private MaterialSkin.Controls.MaterialButton añadirOficinaButton;
+        private Label label49;
+        private Label label39;
+        private ComboBox oficinaComboBox;
+        private Label label43;
     }
 }
