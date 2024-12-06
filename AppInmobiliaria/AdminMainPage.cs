@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Presentation
 {
-    public partial class Menu : Form
+    public partial class AdminMainPage : Form
     {
-        public Menu()
+        public AdminMainPage()
         {
             InitializeComponent();
         }

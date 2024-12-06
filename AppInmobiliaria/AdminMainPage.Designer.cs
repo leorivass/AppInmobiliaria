@@ -1,6 +1,6 @@
 ﻿namespace Presentation
 {
-    partial class Menu
+    partial class AdminMainPage
     {
         /// <summary>
         /// Required designer variable.
@@ -1293,16 +1293,16 @@
             materialTabSelector2.TabIndex = 1;
             materialTabSelector2.Text = "materialTabSelector1";
             // 
-            // Menu
+            // AdminMainPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1032, 732);
             Controls.Add(materialTabControl1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Name = "Menu";
+            Name = "AdminMainPage";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Menu";
+            Text = "Página Principal";
             materialTabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             panel16.ResumeLayout(false);
