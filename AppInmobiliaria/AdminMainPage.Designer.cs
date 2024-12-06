@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMainPage));
             materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             tabPage1 = new TabPage();
             panel16 = new Panel();
@@ -104,6 +105,7 @@
             pictureBox7 = new PictureBox();
             panel4 = new Panel();
             panel3 = new Panel();
+            refreshButton = new PictureBox();
             añadirInmuebleButton = new PictureBox();
             oficinaComboBox = new ComboBox();
             label43 = new Label();
@@ -147,6 +149,7 @@
             panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)refreshButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)añadirInmuebleButton).BeginInit();
             tabPage3.SuspendLayout();
             panel15.SuspendLayout();
@@ -1020,6 +1023,7 @@
             // panel3
             // 
             panel3.BackColor = Color.RoyalBlue;
+            panel3.Controls.Add(refreshButton);
             panel3.Controls.Add(añadirInmuebleButton);
             panel3.Controls.Add(oficinaComboBox);
             panel3.Controls.Add(label43);
@@ -1032,11 +1036,23 @@
             panel3.Size = new Size(1024, 100);
             panel3.TabIndex = 1;
             // 
+            // refreshButton
+            // 
+            refreshButton.Cursor = Cursors.Hand;
+            refreshButton.Image = (Image)resources.GetObject("refreshButton.Image");
+            refreshButton.Location = new Point(46, 57);
+            refreshButton.Name = "refreshButton";
+            refreshButton.Size = new Size(43, 40);
+            refreshButton.SizeMode = PictureBoxSizeMode.StretchImage;
+            refreshButton.TabIndex = 9;
+            refreshButton.TabStop = false;
+            refreshButton.Click += refreshButton_Click;
+            // 
             // añadirInmuebleButton
             // 
             añadirInmuebleButton.Cursor = Cursors.Hand;
-            añadirInmuebleButton.Image = Properties.Resources.add_3179965;
-            añadirInmuebleButton.Location = new Point(96, 57);
+            añadirInmuebleButton.Image = (Image)resources.GetObject("añadirInmuebleButton.Image");
+            añadirInmuebleButton.Location = new Point(146, 57);
             añadirInmuebleButton.Name = "añadirInmuebleButton";
             añadirInmuebleButton.Size = new Size(43, 40);
             añadirInmuebleButton.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1262,6 +1278,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)refreshButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)añadirInmuebleButton).EndInit();
             tabPage3.ResumeLayout(false);
             panel15.ResumeLayout(false);
@@ -1363,5 +1380,6 @@
         private Label label39;
         private ComboBox oficinaComboBox;
         private Label label43;
+        private PictureBox refreshButton;
     }
 }

@@ -25,6 +25,11 @@ namespace Presentation
             oficinaComboBox.DisplayMember = "descripcion";
         }
 
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            CargarOficinas();
+        }
+
         private void añadirPropietarioButton_Click(object sender, EventArgs e)
         {
             AñadirPropietario añadirpropietario = new AñadirPropietario();
