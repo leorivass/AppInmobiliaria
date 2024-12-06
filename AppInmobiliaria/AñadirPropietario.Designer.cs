@@ -31,8 +31,8 @@
             materialCard2 = new MaterialSkin.Controls.MaterialCard();
             cancelarButton = new MaterialSkin.Controls.MaterialButton();
             finalizarButton = new MaterialSkin.Controls.MaterialButton();
-            materialTextBox22 = new MaterialSkin.Controls.MaterialTextBox2();
-            materialTextBox21 = new MaterialSkin.Controls.MaterialTextBox2();
+            cedulaPropietario = new MaterialSkin.Controls.MaterialTextBox2();
+            correoPropietario = new MaterialSkin.Controls.MaterialTextBox2();
             telefonoPropietario = new MaterialSkin.Controls.MaterialTextBox2();
             nombrePropietario = new MaterialSkin.Controls.MaterialTextBox2();
             label1 = new Label();
@@ -44,8 +44,8 @@
             materialCard2.BackColor = Color.FromArgb(255, 255, 255);
             materialCard2.Controls.Add(cancelarButton);
             materialCard2.Controls.Add(finalizarButton);
-            materialCard2.Controls.Add(materialTextBox22);
-            materialCard2.Controls.Add(materialTextBox21);
+            materialCard2.Controls.Add(cedulaPropietario);
+            materialCard2.Controls.Add(correoPropietario);
             materialCard2.Controls.Add(telefonoPropietario);
             materialCard2.Controls.Add(nombrePropietario);
             materialCard2.Controls.Add(label1);
@@ -103,63 +103,64 @@
             finalizarButton.UseVisualStyleBackColor = true;
             finalizarButton.Click += finalizarButton_Click;
             // 
-            // materialTextBox22
+            // cedulaPropietario
             // 
-            materialTextBox22.AnimateReadOnly = false;
-            materialTextBox22.BackgroundImageLayout = ImageLayout.None;
-            materialTextBox22.CharacterCasing = CharacterCasing.Normal;
-            materialTextBox22.Depth = 0;
-            materialTextBox22.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox22.HideSelection = true;
-            materialTextBox22.Hint = "Cédula";
-            materialTextBox22.LeadingIcon = null;
-            materialTextBox22.Location = new Point(392, 162);
-            materialTextBox22.MaxLength = 32767;
-            materialTextBox22.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox22.Name = "materialTextBox22";
-            materialTextBox22.PasswordChar = '\0';
-            materialTextBox22.PrefixSuffixText = null;
-            materialTextBox22.ReadOnly = false;
-            materialTextBox22.RightToLeft = RightToLeft.No;
-            materialTextBox22.SelectedText = "";
-            materialTextBox22.SelectionLength = 0;
-            materialTextBox22.SelectionStart = 0;
-            materialTextBox22.ShortcutsEnabled = true;
-            materialTextBox22.Size = new Size(318, 48);
-            materialTextBox22.TabIndex = 4;
-            materialTextBox22.TabStop = false;
-            materialTextBox22.TextAlign = HorizontalAlignment.Left;
-            materialTextBox22.TrailingIcon = null;
-            materialTextBox22.UseSystemPasswordChar = false;
+            cedulaPropietario.AnimateReadOnly = false;
+            cedulaPropietario.BackgroundImageLayout = ImageLayout.None;
+            cedulaPropietario.CharacterCasing = CharacterCasing.Normal;
+            cedulaPropietario.Depth = 0;
+            cedulaPropietario.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            cedulaPropietario.HideSelection = true;
+            cedulaPropietario.Hint = "Cédula";
+            cedulaPropietario.LeadingIcon = null;
+            cedulaPropietario.Location = new Point(392, 162);
+            cedulaPropietario.MaxLength = 32767;
+            cedulaPropietario.MouseState = MaterialSkin.MouseState.OUT;
+            cedulaPropietario.Name = "cedulaPropietario";
+            cedulaPropietario.PasswordChar = '\0';
+            cedulaPropietario.PrefixSuffixText = null;
+            cedulaPropietario.ReadOnly = false;
+            cedulaPropietario.RightToLeft = RightToLeft.No;
+            cedulaPropietario.SelectedText = "";
+            cedulaPropietario.SelectionLength = 0;
+            cedulaPropietario.SelectionStart = 0;
+            cedulaPropietario.ShortcutsEnabled = true;
+            cedulaPropietario.Size = new Size(318, 48);
+            cedulaPropietario.TabIndex = 4;
+            cedulaPropietario.TabStop = false;
+            cedulaPropietario.TextAlign = HorizontalAlignment.Left;
+            cedulaPropietario.TrailingIcon = null;
+            cedulaPropietario.UseSystemPasswordChar = false;
+            cedulaPropietario.TextChanged += cedulaPropietario_TextChanged;
             // 
-            // materialTextBox21
+            // correoPropietario
             // 
-            materialTextBox21.AnimateReadOnly = false;
-            materialTextBox21.BackgroundImageLayout = ImageLayout.None;
-            materialTextBox21.CharacterCasing = CharacterCasing.Normal;
-            materialTextBox21.Depth = 0;
-            materialTextBox21.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox21.HideSelection = true;
-            materialTextBox21.Hint = "Correo electrónico";
-            materialTextBox21.LeadingIcon = null;
-            materialTextBox21.Location = new Point(37, 162);
-            materialTextBox21.MaxLength = 32767;
-            materialTextBox21.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox21.Name = "materialTextBox21";
-            materialTextBox21.PasswordChar = '\0';
-            materialTextBox21.PrefixSuffixText = null;
-            materialTextBox21.ReadOnly = false;
-            materialTextBox21.RightToLeft = RightToLeft.No;
-            materialTextBox21.SelectedText = "";
-            materialTextBox21.SelectionLength = 0;
-            materialTextBox21.SelectionStart = 0;
-            materialTextBox21.ShortcutsEnabled = true;
-            materialTextBox21.Size = new Size(318, 48);
-            materialTextBox21.TabIndex = 3;
-            materialTextBox21.TabStop = false;
-            materialTextBox21.TextAlign = HorizontalAlignment.Left;
-            materialTextBox21.TrailingIcon = null;
-            materialTextBox21.UseSystemPasswordChar = false;
+            correoPropietario.AnimateReadOnly = false;
+            correoPropietario.BackgroundImageLayout = ImageLayout.None;
+            correoPropietario.CharacterCasing = CharacterCasing.Normal;
+            correoPropietario.Depth = 0;
+            correoPropietario.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            correoPropietario.HideSelection = true;
+            correoPropietario.Hint = "Correo electrónico";
+            correoPropietario.LeadingIcon = null;
+            correoPropietario.Location = new Point(37, 162);
+            correoPropietario.MaxLength = 32767;
+            correoPropietario.MouseState = MaterialSkin.MouseState.OUT;
+            correoPropietario.Name = "correoPropietario";
+            correoPropietario.PasswordChar = '\0';
+            correoPropietario.PrefixSuffixText = null;
+            correoPropietario.ReadOnly = false;
+            correoPropietario.RightToLeft = RightToLeft.No;
+            correoPropietario.SelectedText = "";
+            correoPropietario.SelectionLength = 0;
+            correoPropietario.SelectionStart = 0;
+            correoPropietario.ShortcutsEnabled = true;
+            correoPropietario.Size = new Size(318, 48);
+            correoPropietario.TabIndex = 3;
+            correoPropietario.TabStop = false;
+            correoPropietario.TextAlign = HorizontalAlignment.Left;
+            correoPropietario.TrailingIcon = null;
+            correoPropietario.UseSystemPasswordChar = false;
             // 
             // telefonoPropietario
             // 
@@ -189,6 +190,7 @@
             telefonoPropietario.TextAlign = HorizontalAlignment.Left;
             telefonoPropietario.TrailingIcon = null;
             telefonoPropietario.UseSystemPasswordChar = false;
+            telefonoPropietario.TextChanged += telefonoPropietario_TextChanged;
             // 
             // nombrePropietario
             // 
@@ -251,7 +253,7 @@
         private Label label1;
         private MaterialSkin.Controls.MaterialButton cancelarButton;
         private MaterialSkin.Controls.MaterialButton finalizarButton;
-        private MaterialSkin.Controls.MaterialTextBox2 materialTextBox22;
-        private MaterialSkin.Controls.MaterialTextBox2 materialTextBox21;
+        private MaterialSkin.Controls.MaterialTextBox2 cedulaPropietario;
+        private MaterialSkin.Controls.MaterialTextBox2 correoPropietario;
     }
 }
