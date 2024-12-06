@@ -2,6 +2,7 @@
 using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,8 +53,42 @@ namespace BusinessLogic
 
                 SqlDataReader reader = dbAccess.GetConsult(cmd);
 
-                if (reader.HasRows) return true;
-                else return false;
+                if (reader.HasRows)
+                {
+                    dbAccess.connection.Close();
+                    return true;
+                }
+                else
+                {
+                    dbAccess.connection.Close();
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public DataTable GetAllOffices()
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                string query = "SELECT CONCAT(ubicacion, ', ', telefono) AS Descripcion FROM Oficina";
+
+                DA dbAccess = new DA();
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = query;
+
+                SqlDataReader reader = dbAccess.GetConsult(cmd);
+                dt.Load(reader);
+
+                dbAccess.connection.Close();
+
+                return dt;
             }
             catch (Exception ex)
             {

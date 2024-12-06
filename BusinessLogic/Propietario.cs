@@ -50,8 +50,16 @@ namespace BusinessLogic
 
                 SqlDataReader reader = dbAccess.GetConsult(cmd);
 
-                if (reader.HasRows) return true;
-                else return false;
+                if (reader.HasRows)
+                {
+                    dbAccess.connection.Close();
+                    return true;
+                }
+                else
+                {
+                    dbAccess.connection.Close();
+                    return false;
+                }
             }
             catch (Exception ex)
             {

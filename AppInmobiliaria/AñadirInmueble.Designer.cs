@@ -30,13 +30,14 @@
         {
             panel3 = new Panel();
             materialCard3 = new MaterialSkin.Controls.MaterialCard();
+            oficinaComboBox = new MaterialSkin.Controls.MaterialComboBox();
             materialCard1 = new MaterialSkin.Controls.MaterialCard();
             pictureBox1 = new PictureBox();
             subirImagenButton = new MaterialSkin.Controls.MaterialButton();
             cancelarButton = new MaterialSkin.Controls.MaterialButton();
             continuarButton = new MaterialSkin.Controls.MaterialButton();
-            materialComboBox1 = new MaterialSkin.Controls.MaterialComboBox();
-            tipoLocal = new MaterialSkin.Controls.MaterialComboBox();
+            propietarioComboBox = new MaterialSkin.Controls.MaterialComboBox();
+            tipoLocalComboBox = new MaterialSkin.Controls.MaterialComboBox();
             direccion = new MaterialSkin.Controls.MaterialTextBox2();
             precioAlquiler = new MaterialSkin.Controls.MaterialTextBox2();
             area = new MaterialSkin.Controls.MaterialTextBox2();
@@ -54,18 +55,19 @@
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(833, 328);
+            panel3.Size = new Size(833, 342);
             panel3.TabIndex = 2;
             // 
             // materialCard3
             // 
             materialCard3.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard3.Controls.Add(oficinaComboBox);
             materialCard3.Controls.Add(materialCard1);
             materialCard3.Controls.Add(subirImagenButton);
             materialCard3.Controls.Add(cancelarButton);
             materialCard3.Controls.Add(continuarButton);
-            materialCard3.Controls.Add(materialComboBox1);
-            materialCard3.Controls.Add(tipoLocal);
+            materialCard3.Controls.Add(propietarioComboBox);
+            materialCard3.Controls.Add(tipoLocalComboBox);
             materialCard3.Controls.Add(direccion);
             materialCard3.Controls.Add(precioAlquiler);
             materialCard3.Controls.Add(area);
@@ -80,8 +82,31 @@
             materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard3.Name = "materialCard3";
             materialCard3.Padding = new Padding(14);
-            materialCard3.Size = new Size(833, 328);
+            materialCard3.Size = new Size(833, 342);
             materialCard3.TabIndex = 2;
+            // 
+            // oficinaComboBox
+            // 
+            oficinaComboBox.AutoResize = false;
+            oficinaComboBox.BackColor = Color.FromArgb(255, 255, 255);
+            oficinaComboBox.Depth = 0;
+            oficinaComboBox.DrawMode = DrawMode.OwnerDrawVariable;
+            oficinaComboBox.DropDownHeight = 174;
+            oficinaComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            oficinaComboBox.DropDownWidth = 121;
+            oficinaComboBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            oficinaComboBox.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            oficinaComboBox.FormattingEnabled = true;
+            oficinaComboBox.Hint = "Oficina";
+            oficinaComboBox.IntegralHeight = false;
+            oficinaComboBox.ItemHeight = 43;
+            oficinaComboBox.Location = new Point(26, 276);
+            oficinaComboBox.MaxDropDownItems = 4;
+            oficinaComboBox.MouseState = MaterialSkin.MouseState.OUT;
+            oficinaComboBox.Name = "oficinaComboBox";
+            oficinaComboBox.Size = new Size(251, 49);
+            oficinaComboBox.StartIndex = 0;
+            oficinaComboBox.TabIndex = 12;
             // 
             // materialCard1
             // 
@@ -114,7 +139,7 @@
             subirImagenButton.Depth = 0;
             subirImagenButton.HighEmphasis = true;
             subirImagenButton.Icon = null;
-            subirImagenButton.Location = new Point(644, 277);
+            subirImagenButton.Location = new Point(637, 276);
             subirImagenButton.Margin = new Padding(4, 6, 4, 6);
             subirImagenButton.MouseState = MaterialSkin.MouseState.HOVER;
             subirImagenButton.Name = "subirImagenButton";
@@ -134,7 +159,7 @@
             cancelarButton.Depth = 0;
             cancelarButton.HighEmphasis = true;
             cancelarButton.Icon = null;
-            cancelarButton.Location = new Point(467, 277);
+            cancelarButton.Location = new Point(467, 286);
             cancelarButton.Margin = new Padding(4, 6, 4, 6);
             cancelarButton.MouseState = MaterialSkin.MouseState.HOVER;
             cancelarButton.Name = "cancelarButton";
@@ -155,7 +180,7 @@
             continuarButton.Depth = 0;
             continuarButton.HighEmphasis = true;
             continuarButton.Icon = null;
-            continuarButton.Location = new Point(343, 277);
+            continuarButton.Location = new Point(312, 286);
             continuarButton.Margin = new Padding(4, 6, 4, 6);
             continuarButton.MouseState = MaterialSkin.MouseState.HOVER;
             continuarButton.Name = "continuarButton";
@@ -167,52 +192,52 @@
             continuarButton.UseAccentColor = false;
             continuarButton.UseVisualStyleBackColor = true;
             // 
-            // materialComboBox1
+            // propietarioComboBox
             // 
-            materialComboBox1.AutoResize = false;
-            materialComboBox1.BackColor = Color.FromArgb(255, 255, 255);
-            materialComboBox1.Depth = 0;
-            materialComboBox1.DrawMode = DrawMode.OwnerDrawVariable;
-            materialComboBox1.DropDownHeight = 174;
-            materialComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            materialComboBox1.DropDownWidth = 121;
-            materialComboBox1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialComboBox1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialComboBox1.FormattingEnabled = true;
-            materialComboBox1.Hint = "Seleccionar propietario";
-            materialComboBox1.IntegralHeight = false;
-            materialComboBox1.ItemHeight = 43;
-            materialComboBox1.Location = new Point(26, 77);
-            materialComboBox1.MaxDropDownItems = 4;
-            materialComboBox1.MouseState = MaterialSkin.MouseState.OUT;
-            materialComboBox1.Name = "materialComboBox1";
-            materialComboBox1.Size = new Size(251, 49);
-            materialComboBox1.StartIndex = 0;
-            materialComboBox1.TabIndex = 6;
+            propietarioComboBox.AutoResize = false;
+            propietarioComboBox.BackColor = Color.FromArgb(255, 255, 255);
+            propietarioComboBox.Depth = 0;
+            propietarioComboBox.DrawMode = DrawMode.OwnerDrawVariable;
+            propietarioComboBox.DropDownHeight = 174;
+            propietarioComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            propietarioComboBox.DropDownWidth = 121;
+            propietarioComboBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            propietarioComboBox.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            propietarioComboBox.FormattingEnabled = true;
+            propietarioComboBox.Hint = "Seleccionar propietario";
+            propietarioComboBox.IntegralHeight = false;
+            propietarioComboBox.ItemHeight = 43;
+            propietarioComboBox.Location = new Point(26, 77);
+            propietarioComboBox.MaxDropDownItems = 4;
+            propietarioComboBox.MouseState = MaterialSkin.MouseState.OUT;
+            propietarioComboBox.Name = "propietarioComboBox";
+            propietarioComboBox.Size = new Size(251, 49);
+            propietarioComboBox.StartIndex = 0;
+            propietarioComboBox.TabIndex = 6;
             // 
-            // tipoLocal
+            // tipoLocalComboBox
             // 
-            tipoLocal.AutoResize = false;
-            tipoLocal.BackColor = Color.FromArgb(255, 255, 255);
-            tipoLocal.Depth = 0;
-            tipoLocal.DrawMode = DrawMode.OwnerDrawVariable;
-            tipoLocal.DropDownHeight = 174;
-            tipoLocal.DropDownStyle = ComboBoxStyle.DropDownList;
-            tipoLocal.DropDownWidth = 121;
-            tipoLocal.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            tipoLocal.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            tipoLocal.FormattingEnabled = true;
-            tipoLocal.Hint = "Tipo de vivienda";
-            tipoLocal.IntegralHeight = false;
-            tipoLocal.ItemHeight = 43;
-            tipoLocal.Items.AddRange(new object[] { "Vivienda", "Local" });
-            tipoLocal.Location = new Point(312, 77);
-            tipoLocal.MaxDropDownItems = 4;
-            tipoLocal.MouseState = MaterialSkin.MouseState.OUT;
-            tipoLocal.Name = "tipoLocal";
-            tipoLocal.Size = new Size(251, 49);
-            tipoLocal.StartIndex = 0;
-            tipoLocal.TabIndex = 5;
+            tipoLocalComboBox.AutoResize = false;
+            tipoLocalComboBox.BackColor = Color.FromArgb(255, 255, 255);
+            tipoLocalComboBox.Depth = 0;
+            tipoLocalComboBox.DrawMode = DrawMode.OwnerDrawVariable;
+            tipoLocalComboBox.DropDownHeight = 174;
+            tipoLocalComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            tipoLocalComboBox.DropDownWidth = 121;
+            tipoLocalComboBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            tipoLocalComboBox.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            tipoLocalComboBox.FormattingEnabled = true;
+            tipoLocalComboBox.Hint = "Tipo de vivienda";
+            tipoLocalComboBox.IntegralHeight = false;
+            tipoLocalComboBox.ItemHeight = 43;
+            tipoLocalComboBox.Items.AddRange(new object[] { "Vivienda", "Local" });
+            tipoLocalComboBox.Location = new Point(312, 77);
+            tipoLocalComboBox.MaxDropDownItems = 4;
+            tipoLocalComboBox.MouseState = MaterialSkin.MouseState.OUT;
+            tipoLocalComboBox.Name = "tipoLocalComboBox";
+            tipoLocalComboBox.Size = new Size(251, 49);
+            tipoLocalComboBox.StartIndex = 0;
+            tipoLocalComboBox.TabIndex = 5;
             // 
             // direccion
             // 
@@ -344,7 +369,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(833, 328);
+            ClientSize = new Size(833, 342);
             Controls.Add(panel3);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "AñadirInmueble";
@@ -366,12 +391,13 @@
         private Label label2;
         private MaterialSkin.Controls.MaterialTextBox2 direccion;
         private MaterialSkin.Controls.MaterialTextBox2 precioAlquiler;
-        private MaterialSkin.Controls.MaterialComboBox tipoLocal;
-        private MaterialSkin.Controls.MaterialComboBox materialComboBox1;
+        private MaterialSkin.Controls.MaterialComboBox tipoLocalComboBox;
+        private MaterialSkin.Controls.MaterialComboBox propietarioComboBox;
         private MaterialSkin.Controls.MaterialButton subirImagenButton;
         private MaterialSkin.Controls.MaterialButton cancelarButton;
         private MaterialSkin.Controls.MaterialButton continuarButton;
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private PictureBox pictureBox1;
+        private MaterialSkin.Controls.MaterialComboBox oficinaComboBox;
     }
 }
