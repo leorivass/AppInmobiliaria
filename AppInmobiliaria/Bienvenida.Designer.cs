@@ -80,6 +80,7 @@
             // materialButton2
             // 
             materialButton2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton2.Cursor = Cursors.Hand;
             materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             materialButton2.Depth = 0;
             materialButton2.HighEmphasis = true;
