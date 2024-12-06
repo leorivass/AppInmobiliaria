@@ -28,70 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            telefonoPropietario = new MaterialSkin.Controls.MaterialTextBox2();
-            nombrePropietario = new MaterialSkin.Controls.MaterialTextBox2();
+            telefonoOficina = new MaterialSkin.Controls.MaterialTextBox2();
+            ubicacionOficina = new MaterialSkin.Controls.MaterialTextBox2();
             label1 = new Label();
             cancelarButton = new MaterialSkin.Controls.MaterialButton();
             finalizarButton = new MaterialSkin.Controls.MaterialButton();
             SuspendLayout();
             // 
-            // telefonoPropietario
+            // telefonoOficina
             // 
-            telefonoPropietario.AnimateReadOnly = false;
-            telefonoPropietario.BackgroundImageLayout = ImageLayout.None;
-            telefonoPropietario.CharacterCasing = CharacterCasing.Normal;
-            telefonoPropietario.Depth = 0;
-            telefonoPropietario.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            telefonoPropietario.HideSelection = true;
-            telefonoPropietario.Hint = "Teléfono";
-            telefonoPropietario.LeadingIcon = null;
-            telefonoPropietario.Location = new Point(395, 101);
-            telefonoPropietario.MaxLength = 32767;
-            telefonoPropietario.MouseState = MaterialSkin.MouseState.OUT;
-            telefonoPropietario.Name = "telefonoPropietario";
-            telefonoPropietario.PasswordChar = '\0';
-            telefonoPropietario.PrefixSuffixText = null;
-            telefonoPropietario.ReadOnly = false;
-            telefonoPropietario.RightToLeft = RightToLeft.No;
-            telefonoPropietario.SelectedText = "";
-            telefonoPropietario.SelectionLength = 0;
-            telefonoPropietario.SelectionStart = 0;
-            telefonoPropietario.ShortcutsEnabled = true;
-            telefonoPropietario.Size = new Size(318, 48);
-            telefonoPropietario.TabIndex = 6;
-            telefonoPropietario.TabStop = false;
-            telefonoPropietario.TextAlign = HorizontalAlignment.Left;
-            telefonoPropietario.TrailingIcon = null;
-            telefonoPropietario.UseSystemPasswordChar = false;
+            telefonoOficina.AnimateReadOnly = false;
+            telefonoOficina.BackgroundImageLayout = ImageLayout.None;
+            telefonoOficina.CharacterCasing = CharacterCasing.Normal;
+            telefonoOficina.Depth = 0;
+            telefonoOficina.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            telefonoOficina.HideSelection = true;
+            telefonoOficina.Hint = "Teléfono";
+            telefonoOficina.LeadingIcon = null;
+            telefonoOficina.Location = new Point(395, 101);
+            telefonoOficina.MaxLength = 32767;
+            telefonoOficina.MouseState = MaterialSkin.MouseState.OUT;
+            telefonoOficina.Name = "telefonoOficina";
+            telefonoOficina.PasswordChar = '\0';
+            telefonoOficina.PrefixSuffixText = null;
+            telefonoOficina.ReadOnly = false;
+            telefonoOficina.RightToLeft = RightToLeft.No;
+            telefonoOficina.SelectedText = "";
+            telefonoOficina.SelectionLength = 0;
+            telefonoOficina.SelectionStart = 0;
+            telefonoOficina.ShortcutsEnabled = true;
+            telefonoOficina.Size = new Size(318, 48);
+            telefonoOficina.TabIndex = 6;
+            telefonoOficina.TabStop = false;
+            telefonoOficina.TextAlign = HorizontalAlignment.Left;
+            telefonoOficina.TrailingIcon = null;
+            telefonoOficina.UseSystemPasswordChar = false;
+            telefonoOficina.TextChanged += telefonoOficina_TextChanged;
             // 
-            // nombrePropietario
+            // ubicacionOficina
             // 
-            nombrePropietario.AnimateReadOnly = false;
-            nombrePropietario.BackgroundImageLayout = ImageLayout.None;
-            nombrePropietario.CharacterCasing = CharacterCasing.Normal;
-            nombrePropietario.Depth = 0;
-            nombrePropietario.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            nombrePropietario.HideSelection = true;
-            nombrePropietario.Hint = "Nombre";
-            nombrePropietario.LeadingIcon = null;
-            nombrePropietario.Location = new Point(29, 101);
-            nombrePropietario.MaxLength = 32767;
-            nombrePropietario.MouseState = MaterialSkin.MouseState.OUT;
-            nombrePropietario.Name = "nombrePropietario";
-            nombrePropietario.PasswordChar = '\0';
-            nombrePropietario.PrefixSuffixText = null;
-            nombrePropietario.ReadOnly = false;
-            nombrePropietario.RightToLeft = RightToLeft.No;
-            nombrePropietario.SelectedText = "";
-            nombrePropietario.SelectionLength = 0;
-            nombrePropietario.SelectionStart = 0;
-            nombrePropietario.ShortcutsEnabled = true;
-            nombrePropietario.Size = new Size(318, 48);
-            nombrePropietario.TabIndex = 5;
-            nombrePropietario.TabStop = false;
-            nombrePropietario.TextAlign = HorizontalAlignment.Left;
-            nombrePropietario.TrailingIcon = null;
-            nombrePropietario.UseSystemPasswordChar = false;
+            ubicacionOficina.AnimateReadOnly = false;
+            ubicacionOficina.BackgroundImageLayout = ImageLayout.None;
+            ubicacionOficina.CharacterCasing = CharacterCasing.Normal;
+            ubicacionOficina.Depth = 0;
+            ubicacionOficina.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            ubicacionOficina.HideSelection = true;
+            ubicacionOficina.Hint = "Ubicación";
+            ubicacionOficina.LeadingIcon = null;
+            ubicacionOficina.Location = new Point(29, 101);
+            ubicacionOficina.MaxLength = 32767;
+            ubicacionOficina.MouseState = MaterialSkin.MouseState.OUT;
+            ubicacionOficina.Name = "ubicacionOficina";
+            ubicacionOficina.PasswordChar = '\0';
+            ubicacionOficina.PrefixSuffixText = null;
+            ubicacionOficina.ReadOnly = false;
+            ubicacionOficina.RightToLeft = RightToLeft.No;
+            ubicacionOficina.SelectedText = "";
+            ubicacionOficina.SelectionLength = 0;
+            ubicacionOficina.SelectionStart = 0;
+            ubicacionOficina.ShortcutsEnabled = true;
+            ubicacionOficina.Size = new Size(318, 48);
+            ubicacionOficina.TabIndex = 5;
+            ubicacionOficina.TabStop = false;
+            ubicacionOficina.TextAlign = HorizontalAlignment.Left;
+            ubicacionOficina.TrailingIcon = null;
+            ubicacionOficina.UseSystemPasswordChar = false;
             // 
             // label1
             // 
@@ -102,7 +103,6 @@
             label1.Size = new Size(242, 37);
             label1.TabIndex = 9;
             label1.Text = "Datos de la oficina";
-            label1.Click += label1_Click;
             // 
             // cancelarButton
             // 
@@ -144,6 +144,7 @@
             finalizarButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             finalizarButton.UseAccentColor = false;
             finalizarButton.UseVisualStyleBackColor = true;
+            finalizarButton.Click += finalizarButton_Click;
             // 
             // AñadirOficina
             // 
@@ -153,19 +154,18 @@
             Controls.Add(cancelarButton);
             Controls.Add(finalizarButton);
             Controls.Add(label1);
-            Controls.Add(telefonoPropietario);
-            Controls.Add(nombrePropietario);
+            Controls.Add(telefonoOficina);
+            Controls.Add(ubicacionOficina);
             Name = "AñadirOficina";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Añadir Oficina";
-            Load += anadiroficina_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private MaterialSkin.Controls.MaterialTextBox2 telefonoPropietario;
-        private MaterialSkin.Controls.MaterialTextBox2 nombrePropietario;
+        private MaterialSkin.Controls.MaterialTextBox2 telefonoOficina;
+        private MaterialSkin.Controls.MaterialTextBox2 ubicacionOficina;
         private Label label1;
         private MaterialSkin.Controls.MaterialButton cancelarButton;
         private MaterialSkin.Controls.MaterialButton finalizarButton;

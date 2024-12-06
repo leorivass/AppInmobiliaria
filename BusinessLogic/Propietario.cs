@@ -57,8 +57,6 @@ namespace BusinessLogic
             {
                 throw;
             }
-
-
         }
 
         public int? GetID()
