@@ -349,7 +349,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "AñadirInmueble";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "CrearFicha";
+            Text = "Añadir Inmueble";
             panel3.ResumeLayout(false);
             materialCard3.ResumeLayout(false);
             materialCard3.PerformLayout();

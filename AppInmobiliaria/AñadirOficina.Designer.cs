@@ -1,6 +1,6 @@
 ﻿namespace Presentation
 {
-    partial class anadiroficina
+    partial class AñadirOficina
     {
         /// <summary>
         /// Required designer variable.
@@ -45,7 +45,7 @@
             telefonoPropietario.HideSelection = true;
             telefonoPropietario.Hint = "Teléfono";
             telefonoPropietario.LeadingIcon = null;
-            telefonoPropietario.Location = new Point(408, 101);
+            telefonoPropietario.Location = new Point(395, 101);
             telefonoPropietario.MaxLength = 32767;
             telefonoPropietario.MouseState = MaterialSkin.MouseState.OUT;
             telefonoPropietario.Name = "telefonoPropietario";
@@ -74,7 +74,7 @@
             nombrePropietario.HideSelection = true;
             nombrePropietario.Hint = "Nombre";
             nombrePropietario.LeadingIcon = null;
-            nombrePropietario.Location = new Point(53, 101);
+            nombrePropietario.Location = new Point(29, 101);
             nombrePropietario.MaxLength = 32767;
             nombrePropietario.MouseState = MaterialSkin.MouseState.OUT;
             nombrePropietario.Name = "nombrePropietario";
@@ -97,11 +97,11 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Yu Gothic UI Semibold", 20F);
-            label1.Location = new Point(251, 41);
+            label1.Location = new Point(255, 34);
             label1.Name = "label1";
-            label1.Size = new Size(261, 37);
+            label1.Size = new Size(242, 37);
             label1.TabIndex = 9;
-            label1.Text = "Informacion Oficina";
+            label1.Text = "Datos de la oficina";
             label1.Click += label1_Click;
             // 
             // cancelarButton
@@ -112,7 +112,7 @@
             cancelarButton.Depth = 0;
             cancelarButton.HighEmphasis = true;
             cancelarButton.Icon = null;
-            cancelarButton.Location = new Point(630, 176);
+            cancelarButton.Location = new Point(617, 176);
             cancelarButton.Margin = new Padding(4, 6, 4, 6);
             cancelarButton.MouseState = MaterialSkin.MouseState.HOVER;
             cancelarButton.Name = "cancelarButton";
@@ -133,7 +133,7 @@
             finalizarButton.Depth = 0;
             finalizarButton.HighEmphasis = true;
             finalizarButton.Icon = null;
-            finalizarButton.Location = new Point(515, 176);
+            finalizarButton.Location = new Point(504, 176);
             finalizarButton.Margin = new Padding(4, 6, 4, 6);
             finalizarButton.MouseState = MaterialSkin.MouseState.HOVER;
             finalizarButton.Name = "finalizarButton";
@@ -145,7 +145,7 @@
             finalizarButton.UseAccentColor = false;
             finalizarButton.UseVisualStyleBackColor = true;
             // 
-            // anadiroficina
+            // AñadirOficina
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -155,8 +155,9 @@
             Controls.Add(label1);
             Controls.Add(telefonoPropietario);
             Controls.Add(nombrePropietario);
-            Name = "anadiroficina";
-            Text = "AñadirOficina";
+            Name = "AñadirOficina";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Añadir Oficina";
             Load += anadiroficina_Load;
             ResumeLayout(false);
             PerformLayout();

@@ -1,6 +1,14 @@
-using Presentation;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace AppInmobiliaria
+namespace Presentation
 {
     public partial class Menu : Form
     {
@@ -9,22 +17,22 @@ namespace AppInmobiliaria
             InitializeComponent();
         }
 
-        private void crearFicha_Click(object sender, EventArgs e)
+        private void añadirPropietarioButton_Click(object sender, EventArgs e)
         {
-            A�adirInmueble a�adirinmueble = new A�adirInmueble();
-            a�adirinmueble.ShowDialog();
+            AñadirPropietario añadirpropietario = new AñadirPropietario();
+            añadirpropietario.ShowDialog();
         }
 
-        private void materialButton4_Click(object sender, EventArgs e)
+        private void añadirOficinaButton_Click(object sender, EventArgs e)
         {
-            A�adirPropietario a�adirpropietario = new A�adirPropietario();
-            a�adirpropietario.ShowDialog();
+            AñadirOficina añadiroficina = new AñadirOficina();
+            añadiroficina.ShowDialog();
         }
 
-        private void materialButton9_Click(object sender, EventArgs e)
+        private void añadirInmuebleButton_Click(object sender, EventArgs e)
         {
-            anadiroficina a�adiroficina = new anadiroficina();
-            a�adiroficina.ShowDialog();
+            AñadirInmueble añadirinmueble = new AñadirInmueble();
+            añadirinmueble.ShowDialog();
         }
     }
 }

@@ -236,7 +236,8 @@
             ClientSize = new Size(743, 275);
             Controls.Add(materialCard2);
             Name = "AñadirPropietario";
-            Text = "AñadirPropietario";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Añadir Propietario";
             materialCard2.ResumeLayout(false);
             materialCard2.PerformLayout();
             ResumeLayout(false);
