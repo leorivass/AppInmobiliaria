@@ -87,7 +87,16 @@ namespace Presentation
                 propietario.correo = correoPropietario.Text;
                 propietario.cedula = cedulaPropietario.Text;
 
-                if (propietario.DoesThisOwnerExist()) MessageBox.Show("Esta cédula ya se encuentra registrada.");
+                if (String.IsNullOrEmpty(nombrePropietario.Text) || String.IsNullOrEmpty(telefonoPropietario.Text) || String.IsNullOrEmpty(correoPropietario.Text) || String.IsNullOrEmpty(cedulaPropietario.Text))
+                {
+                    MessageBox.Show("Entrada no válida. Por favor, ingrese los campos faltantes.");
+                    return;
+                }
+
+                if (propietario.DoesThisOwnerExist())
+                {
+                    MessageBox.Show("Esta cédula ya se encuentra registrada.");
+                }
                 else
                 {
                     propietario.Add();
