@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace Presentation
         public AdminMainPage()
         {
             InitializeComponent();
+            CargarOficinas();
+        }
+        private void CargarOficinas()
+        {
+            Oficina oficina = new Oficina();
+            oficinaComboBox.DataSource = oficina.GetAllOffices();
+            oficinaComboBox.DisplayMember = "descripcion";
         }
 
         private void añadirPropietarioButton_Click(object sender, EventArgs e)

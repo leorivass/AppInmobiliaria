@@ -1046,9 +1046,9 @@
             // 
             // oficinaComboBox
             // 
-            oficinaComboBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            oficinaComboBox.AutoCompleteSource = AutoCompleteSource.ListItems;
             oficinaComboBox.Cursor = Cursors.Hand;
+            oficinaComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            oficinaComboBox.DropDownWidth = 202;
             oficinaComboBox.FlatStyle = FlatStyle.Flat;
             oficinaComboBox.Font = new Font("Lucida Fax", 9F);
             oficinaComboBox.FormattingEnabled = true;

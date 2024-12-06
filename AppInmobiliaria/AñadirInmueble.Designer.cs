@@ -200,7 +200,7 @@
             propietarioComboBox.DrawMode = DrawMode.OwnerDrawVariable;
             propietarioComboBox.DropDownHeight = 174;
             propietarioComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-            propietarioComboBox.DropDownWidth = 121;
+            propietarioComboBox.DropDownWidth = 250;
             propietarioComboBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
             propietarioComboBox.ForeColor = Color.FromArgb(222, 0, 0, 0);
             propietarioComboBox.FormattingEnabled = true;

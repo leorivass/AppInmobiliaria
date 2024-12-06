@@ -17,12 +17,20 @@ namespace Presentation
         {
             InitializeComponent();
             CargarOficinas();
+            CargarPropietarios();
         }
         private void CargarOficinas()
         {
             Oficina oficina = new Oficina();
             oficinaComboBox.DataSource = oficina.GetAllOffices();
-            oficinaComboBox.DisplayMember = "Descripcion";
+            oficinaComboBox.DisplayMember = "descripcion";
+        }
+        private void CargarPropietarios()
+        {
+            Propietario propietario = new Propietario();
+            propietarioComboBox.DataSource = propietario.GetAllOwners();
+            propietarioComboBox.DisplayMember = "descripcion";
+            propietarioComboBox.DropDownStyle = ComboBoxStyle.DropDown;
         }
         private void cancelarButton_Click(object sender, EventArgs e)
         {

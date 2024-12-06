@@ -76,7 +76,7 @@ namespace BusinessLogic
 
             try
             {
-                string query = "SELECT CONCAT(ubicacion, ', ', telefono) AS Descripcion FROM Oficina";
+                string query = "select concat(ubicacion, ', ', telefono) as descripcion from Oficina";
 
                 DA dbAccess = new DA();
 

@@ -1,5 +1,6 @@
 ﻿using DataAccess;
 using Microsoft.Data.SqlClient;
+using System.Data;
 
 namespace BusinessLogic
 {
@@ -93,6 +94,32 @@ namespace BusinessLogic
                     dbAccess.connection.Close();
                     return null;
                 }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public DataTable GetAllOwners()
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                string query = "select concat(nombre, ', ', cedula) as descripcion from Propietario";
+
+                DA dbAccess = new DA();
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = query;
+
+                SqlDataReader reader = dbAccess.GetConsult(cmd);
+                dt.Load(reader);
+
+                dbAccess.connection.Close();
+
+                return dt;
             }
             catch (Exception ex)
             {
