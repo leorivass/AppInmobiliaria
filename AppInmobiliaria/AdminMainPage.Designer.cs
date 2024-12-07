@@ -120,8 +120,8 @@
             añadirOficinaButton = new MaterialSkin.Controls.MaterialButton();
             panel14 = new Panel();
             panel12 = new Panel();
-            materialTabSelector2 = new MaterialSkin.Controls.MaterialTabSelector();
             pictureBox9 = new PictureBox();
+            materialTabSelector2 = new MaterialSkin.Controls.MaterialTabSelector();
             materialTabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             panel16.SuspendLayout();
@@ -196,7 +196,7 @@
             panel16.Dock = DockStyle.Fill;
             panel16.Location = new Point(0, 100);
             panel16.Name = "panel16";
-            panel16.Size = new Size(1024, 504);
+            panel16.Size = new Size(1024, 528);
             panel16.TabIndex = 6;
             // 
             // eliminarPropietarioButton
@@ -218,6 +218,7 @@
             eliminarPropietarioButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             eliminarPropietarioButton.UseAccentColor = false;
             eliminarPropietarioButton.UseVisualStyleBackColor = true;
+            eliminarPropietarioButton.Click += eliminarPropietarioButton_Click;
             // 
             // propietariosGridView
             // 
@@ -289,9 +290,9 @@
             // 
             panel13.BackColor = Color.RoyalBlue;
             panel13.Dock = DockStyle.Bottom;
-            panel13.Location = new Point(0, 604);
+            panel13.Location = new Point(0, 628);
             panel13.Name = "panel13";
-            panel13.Size = new Size(1024, 100);
+            panel13.Size = new Size(1024, 76);
             panel13.TabIndex = 3;
             // 
             // tabPage2
@@ -1230,6 +1231,18 @@
             panel12.Size = new Size(1024, 100);
             panel12.TabIndex = 2;
             // 
+            // pictureBox9
+            // 
+            pictureBox9.Cursor = Cursors.Hand;
+            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
+            pictureBox9.Location = new Point(79, 52);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(43, 40);
+            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox9.TabIndex = 11;
+            pictureBox9.TabStop = false;
+            pictureBox9.Click += pictureBox9_Click;
+            // 
             // materialTabSelector2
             // 
             materialTabSelector2.BaseTabControl = materialTabControl1;
@@ -1242,18 +1255,6 @@
             materialTabSelector2.Size = new Size(543, 48);
             materialTabSelector2.TabIndex = 1;
             materialTabSelector2.Text = "materialTabSelector1";
-            // 
-            // pictureBox9
-            // 
-            pictureBox9.Cursor = Cursors.Hand;
-            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
-            pictureBox9.Location = new Point(79, 52);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(43, 40);
-            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox9.TabIndex = 11;
-            pictureBox9.TabStop = false;
-            pictureBox9.Click += pictureBox9_Click;
             // 
             // AdminMainPage
             // 

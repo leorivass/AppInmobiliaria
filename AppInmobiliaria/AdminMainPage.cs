@@ -82,7 +82,28 @@ namespace Presentation
             Oficina oficina = new Oficina();
             oficina.CargarOficinas(oficinasGridView);
         }
-    }
 
+        private void eliminarPropietarioButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Propietario propietario = new Propietario();
+                DataGridViewRow selectedRow = propietariosGridView.SelectedRows[0];
+
+                int id = Convert.ToInt32(selectedRow.Cells["ID"].Value);
+
+
+                propietario.DeletePropietario(id);
+                MessageBox.Show("Propietario eliminado correctamente.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar el propietario: " + ex.Message);
+            }
+        }
+
+    }
 }
+
+
 

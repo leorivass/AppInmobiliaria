@@ -150,6 +150,24 @@ namespace BusinessLogic
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+        public void DeletePropietario(int  id)
+        {
+            try
+            {
+                string query = "DELETE FROM Propietario WHERE id = @id";
 
+
+                DA db = new DA();
+
+                SqlCommand cmd = new SqlCommand(query, db.connection);
+                cmd.Parameters.AddWithValue("@id", id);
+                db.ExecuteQuery(cmd);
+                
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al eliminar el propietario: " + ex.Message, ex);
+            }
+        }
     }
 }
