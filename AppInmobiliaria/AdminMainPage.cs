@@ -102,6 +102,24 @@ namespace Presentation
             }
         }
 
+        private void eliminarOficinaButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Oficina oficina = new Oficina();
+                DataGridViewRow selectedRow = oficinasGridView.SelectedRows[0];
+
+                int id = Convert.ToInt32(selectedRow.Cells["ID"].Value);
+
+
+                oficina.DeleteOficina(id);
+                MessageBox.Show("Oficina eliminada correctamente.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar oficina: " + ex.Message);
+            }
+        }
     }
 }
 

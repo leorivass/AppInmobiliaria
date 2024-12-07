@@ -1180,6 +1180,7 @@
             eliminarOficinaButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             eliminarOficinaButton.UseAccentColor = false;
             eliminarOficinaButton.UseVisualStyleBackColor = true;
+            eliminarOficinaButton.Click += eliminarOficinaButton_Click;
             // 
             // oficinasGridView
             // 

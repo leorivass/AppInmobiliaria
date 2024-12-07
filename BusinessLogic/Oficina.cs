@@ -119,5 +119,24 @@ namespace BusinessLogic
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+        public void DeleteOficina(int id)
+        {
+            try
+            {
+                string query = "DELETE FROM Oficina WHERE id = @id";
+
+
+                DA db = new DA();
+
+                SqlCommand cmd = new SqlCommand(query, db.connection);
+                cmd.Parameters.AddWithValue("@id", id);
+                db.ExecuteQuery(cmd);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al eliminar la oficina: " + ex.Message, ex);
+            }
+        }
     }
 }
