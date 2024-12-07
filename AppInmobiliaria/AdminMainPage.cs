@@ -45,12 +45,9 @@ namespace Presentation
                     card.ImagenPropiedad = Image.FromStream(stream);
                 }
             }
-<<<<<<< HEAD
 
             inmueblesLayoutPanel.Controls.Add(card);
-=======
-                inmueblesLayoutPanel.Controls.Add(card); 
->>>>>>> 8595436246196e34af0f2eabf1304eebced69b70
+            
         }
 
         private void CargarOficinas()
