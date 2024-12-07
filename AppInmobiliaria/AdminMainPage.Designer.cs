@@ -1109,7 +1109,7 @@
             filtroComboBox.FlatStyle = FlatStyle.Flat;
             filtroComboBox.Font = new Font("Microsoft Sans Serif", 9F);
             filtroComboBox.FormattingEnabled = true;
-            filtroComboBox.Items.AddRange(new object[] { "Local", "Casa", "Piso", "Villa" });
+            filtroComboBox.Items.AddRange(new object[] { "Casa", "Villa", "Piso", "Local" });
             filtroComboBox.Location = new Point(916, 71);
             filtroComboBox.Name = "filtroComboBox";
             filtroComboBox.Size = new Size(88, 23);

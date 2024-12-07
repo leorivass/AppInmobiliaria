@@ -191,6 +191,7 @@
             continuarButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             continuarButton.UseAccentColor = false;
             continuarButton.UseVisualStyleBackColor = true;
+            continuarButton.Click += continuarButton_Click;
             // 
             // propietarioComboBox
             // 
@@ -227,10 +228,10 @@
             tipoLocalComboBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
             tipoLocalComboBox.ForeColor = Color.FromArgb(222, 0, 0, 0);
             tipoLocalComboBox.FormattingEnabled = true;
-            tipoLocalComboBox.Hint = "Tipo de vivienda";
+            tipoLocalComboBox.Hint = "Tipo de inmueble";
             tipoLocalComboBox.IntegralHeight = false;
             tipoLocalComboBox.ItemHeight = 43;
-            tipoLocalComboBox.Items.AddRange(new object[] { "Vivienda", "Local" });
+            tipoLocalComboBox.Items.AddRange(new object[] { "Casa", "Villa", "Piso", "Local" });
             tipoLocalComboBox.Location = new Point(312, 77);
             tipoLocalComboBox.MaxDropDownItems = 4;
             tipoLocalComboBox.MouseState = MaterialSkin.MouseState.OUT;

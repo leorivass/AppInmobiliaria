@@ -36,7 +36,6 @@ namespace BusinessLogic
                 throw;
             }
         }
-
         public bool DoesThisOwnerExist()
         {
             try
@@ -67,7 +66,6 @@ namespace BusinessLogic
                 throw;
             }
         }
-
         public int? GetID()
         {
             try
@@ -100,14 +98,13 @@ namespace BusinessLogic
                 throw;
             }
         }
-
         public DataTable GetAllOwners()
         {
             DataTable dt = new DataTable();
 
             try
             {
-                string query = "select concat(nombre, ', ', cedula) as descripcion from Propietario";
+                string query = "select id, concat(nombre, ', ', cedula) as descripcion from Propietario";
 
                 DA dbAccess = new DA();
 

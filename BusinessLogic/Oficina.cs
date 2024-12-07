@@ -37,7 +37,6 @@ namespace BusinessLogic
                 throw;
             }
         }
-
         public bool DoesThisOfficeExist()
         {
             try
@@ -69,14 +68,13 @@ namespace BusinessLogic
                 throw;
             }
         }
-
         public DataTable GetAllOffices()
         {
             DataTable dt = new DataTable();
 
             try
             {
-                string query = "select concat(ubicacion, ', ', telefono) as descripcion from Oficina";
+                string query = "select id, concat(ubicacion, ', ', telefono) as descripcion from Oficina";
 
                 DA dbAccess = new DA();
 
