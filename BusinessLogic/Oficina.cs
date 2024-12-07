@@ -136,5 +136,24 @@ namespace BusinessLogic
                 throw new Exception("Error al eliminar la oficina: " + ex.Message, ex);
             }
         }
+        public static void EditOficina(int id, string ubicacion, string telefono)
+        {     
+             try
+                {
+                    string query = "UPDATE Oficina SET ubicacion = @ubicacion, telefono = @telefono WHERE id = @id";
+                    DA db = new DA();
+
+                    SqlCommand cmd = new SqlCommand(query, db.connection);
+                    cmd.Parameters.AddWithValue("@ubicacion", ubicacion);
+                    cmd.Parameters.AddWithValue("@telefono", telefono);
+                    cmd.Parameters.AddWithValue("@id", id);
+                    db.ExecuteQuery(cmd);
+
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error al editar oficina: " + ex.Message, ex);
+                }
+        }
     }
 }
