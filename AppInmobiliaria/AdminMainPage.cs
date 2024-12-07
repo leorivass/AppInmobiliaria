@@ -10,29 +10,116 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAccess;
 using Microsoft.Data.SqlClient;
+using System.Net;
+using System.Security.Cryptography.Xml;
+using System.Diagnostics;
 
 
 namespace Presentation
 {
-    public partial class AdminMainPage : Form
+    public partial class adminPage : Form
     {
-        public AdminMainPage()
+        public adminPage()
         {
             InitializeComponent();
             CargarOficinas();
+            CargarPropiedades();    
         }
+        public void AddPropertyCard(string tipo, string precioVenta, string precioAlquiler, string referencia, string imagenPropiedad)
+        {
+            PropertyCard card = new PropertyCard()
+            {
+                Tipo = tipo,
+                PrecioVenta = precioVenta,
+                PrecioAlquiler = precioAlquiler,
+                Referencia = referencia,
+            };
+
+            using (WebClient client = new WebClient())
+            {
+                byte[] imageBytes = client.DownloadData(imagenPropiedad);
+                using (MemoryStream stream = new MemoryStream(imageBytes))
+                {
+                    card.ImagenPropiedad = Image.FromStream(stream); 
+                }
+            }
+
+            inmueblesLayoutPanel.Controls.Add(card); 
+        }
+
         private void CargarOficinas()
         {
+            // Guardar la selección actual
+            int idSeleccionado = -1;
+            if (oficinaComboBox.SelectedValue != null)
+            {
+                idSeleccionado = Convert.ToInt32(oficinaComboBox.SelectedValue);
+            }
+
             Oficina oficina = new Oficina();
             oficinaComboBox.DataSource = oficina.GetAllOffices();
             oficinaComboBox.DisplayMember = "descripcion";
+            oficinaComboBox.ValueMember = "id";
+
+            // Restaurar la selección
+            if (idSeleccionado != -1)
+            {
+                oficinaComboBox.SelectedValue = idSeleccionado;
+            }
+        }
+
+        private void CargarPropiedades()
+        {
+            inmueblesLayoutPanel.Controls.Clear();
+
+            if (oficinaComboBox.SelectedValue == null)
+            {
+                return;
+            }
+
+            int idOficina = Convert.ToInt32(oficinaComboBox.SelectedValue);
+
+            PropiedadCompleta propiedadcompleta = new PropiedadCompleta();
+            List<PropiedadCompleta> propiedades = propiedadcompleta.GetPropertyData(idOficina);
+
+            foreach (var propiedad in propiedades)
+            {
+                PropertyCard card = new PropertyCard()
+                {
+                    Tipo = propiedad.tipo,
+                    PrecioVenta = propiedad.precioVenta.ToString(),
+                    PrecioAlquiler = propiedad.precioAlquiler.ToString(),
+                    Referencia = propiedad.idInmueble.ToString(),
+                };
+
+                if (!string.IsNullOrEmpty(propiedad.imagenUrl))
+                {
+                    try
+                    {
+                        using (WebClient client = new WebClient())
+                        {
+                            byte[] imageBytes = client.DownloadData(propiedad.imagenUrl);
+                            using (MemoryStream stream = new MemoryStream(imageBytes))
+                            {
+                                card.ImagenPropiedad = Image.FromStream(stream);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        card.ImagenPropiedad = null; // Asigna una imagen predeterminada si falla
+                    }
+                }
+
+                inmueblesLayoutPanel.Controls.Add(card);
+            }
         }
 
         private void refreshButton_Click(object sender, EventArgs e)
         {
             CargarOficinas();
+            CargarPropiedades();
         }
-
 
         private void añadirPropietarioButton_Click(object sender, EventArgs e)
         {
@@ -48,13 +135,8 @@ namespace Presentation
 
         private void añadirInmuebleButton_Click(object sender, EventArgs e)
         {
-            AñadirInmueble añadirinmueble = new AñadirInmueble();
+            AñadirInmueble añadirinmueble = new AñadirInmueble(this);
             añadirinmueble.ShowDialog();
-        }
-
-        private void propietariosGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void AdminMainPage_Load(object sender, EventArgs e)
@@ -69,12 +151,6 @@ namespace Presentation
         {
             Propietario propietario = new Propietario();
             propietario.CargarPropietarios(propietariosGridView);
-        }
-
-        private void oficinasGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)

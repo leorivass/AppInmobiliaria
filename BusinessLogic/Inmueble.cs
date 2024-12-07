@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace BusinessLogic
 {
@@ -19,11 +20,11 @@ namespace BusinessLogic
         public string? ruta_foto { get; set; }
         public int REF { get; set; }
 
-        public void Add()
+        public int Add()
         {
             try
             {
-                string query = "insert into Inmueble (id_oficina, id_propietario, precio_venta, precio_alquiler, direccion, metros_cuadrados, ruta_foto) values (@id_oficina, @id_propietario, @precio_venta, @precio_alquiler, @direccion, @metros_cuadrados, @ruta_foto)";
+                string query = "insert into Inmueble (id_oficina, id_propietario, precio_venta, precio_alquiler, direccion, metros_cuadrados, ruta_foto) output inserted.id values (@id_oficina, @id_propietario, @precio_venta, @precio_alquiler, @direccion, @metros_cuadrados, @ruta_foto)";
 
                 DA dbAccess = new DA();
 
@@ -37,9 +38,7 @@ namespace BusinessLogic
                 cmd.Parameters.AddWithValue("@metros_cuadrados", metros_cuadrados);
                 cmd.Parameters.AddWithValue("@ruta_foto", ruta_foto);
 
-                dbAccess.ExecuteQuery(cmd);
-
-                return;
+                return dbAccess.ExecuteAndGetID(cmd);
             }
             catch (Exception ex)
             {

@@ -45,5 +45,23 @@ namespace DataAccess
                 throw;
             }
         }
+        public int ExecuteAndGetID(SqlCommand cmd)
+        {
+            int idInsertado;
+            try
+            {
+                connection.Open();
+                cmd.Connection = connection;
+                idInsertado = (int)cmd.ExecuteScalar();
+                connection.Close();
+
+                return idInsertado;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+
+        }
     }
 }
