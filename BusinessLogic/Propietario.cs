@@ -166,5 +166,26 @@ namespace BusinessLogic
                 throw new Exception("Error al eliminar el propietario: " + ex.Message, ex);
             }
         }
+        public static void EditPropietario(int id, string nombre, string telefono, string correo, string cedula)
+        {
+            try
+            {
+                string query = "UPDATE Propietario SET nombre = @nombre, telefono = @telefono, correo = @correo, cedula = @cedula WHERE id = @id";
+                DA db = new DA();
+
+                SqlCommand cmd = new SqlCommand(query, db.connection);
+                cmd.Parameters.AddWithValue("@nombre", nombre);
+                cmd.Parameters.AddWithValue("@telefono", telefono);
+                cmd.Parameters.AddWithValue("@correo", correo);
+                cmd.Parameters.AddWithValue("@cedula", cedula);
+                cmd.Parameters.AddWithValue("@id", id);
+                db.ExecuteQuery(cmd);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al editar el propietario: " + ex.Message, ex);
+            }
+        }
     }
 }

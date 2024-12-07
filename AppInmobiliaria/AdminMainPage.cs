@@ -145,6 +145,7 @@ namespace Presentation
             propietario.CargarPropietarios(propietariosGridView);
             Oficina oficina = new Oficina();
             oficina.CargarOficinas(oficinasGridView);
+            propietariosGridView.ReadOnly = false;
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
@@ -194,6 +195,50 @@ namespace Presentation
             catch (Exception ex)
             {
                 MessageBox.Show("Error al eliminar oficina: " + ex.Message);
+            }
+        }
+
+        private void panel14_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void materialButton2_Click(object sender, EventArgs e)
+
+        {
+            Propietario propietario = new Propietario();
+            if (propietariosGridView.SelectedRows.Count > 0)
+            {
+                try
+                {
+                    if (propietariosGridView.SelectedRows.Count > 0)
+                    {
+                        
+                        DataGridViewRow selectedRow = propietariosGridView.SelectedRows[0];
+
+                        
+                        int id = Convert.ToInt32(selectedRow.Cells["id"].Value);
+                        string nombre = selectedRow.Cells["nombre"].Value.ToString();
+                        string telefono = selectedRow.Cells["telefono"].Value.ToString();
+                        string correo = selectedRow.Cells["correo"].Value.ToString();
+                        string cedula = selectedRow.Cells["cedula"].Value.ToString();
+
+                        
+                        Propietario.EditPropietario(id, nombre, telefono, correo, cedula);
+
+                        
+                        MessageBox.Show("Propietario actualizado correctamente.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Por favor, selecciona una fila para editar.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    
+                    MessageBox.Show("Error al actualizar el propietario: " + ex.Message);
+                }
             }
         }
     }
