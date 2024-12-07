@@ -36,6 +36,7 @@
             propietariosGridView = new DataGridView();
             añadirPropietarioButton = new MaterialSkin.Controls.MaterialButton();
             panel11 = new Panel();
+            pictureBox8 = new PictureBox();
             materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             panel13 = new Panel();
             tabPage2 = new TabPage();
@@ -120,12 +121,13 @@
             panel14 = new Panel();
             panel12 = new Panel();
             materialTabSelector2 = new MaterialSkin.Controls.MaterialTabSelector();
-            pictureBox8 = new PictureBox();
+            pictureBox9 = new PictureBox();
             materialTabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)propietariosGridView).BeginInit();
             panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             tabPage2.SuspendLayout();
             inmueblesLayoutPanel.SuspendLayout();
             materialCard1.SuspendLayout();
@@ -156,7 +158,7 @@
             panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)oficinasGridView).BeginInit();
             panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             SuspendLayout();
             // 
             // materialTabControl1
@@ -257,6 +259,18 @@
             panel11.Name = "panel11";
             panel11.Size = new Size(1024, 100);
             panel11.TabIndex = 4;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.Cursor = Cursors.Hand;
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
+            pictureBox8.Location = new Point(79, 52);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(43, 40);
+            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox8.TabIndex = 10;
+            pictureBox8.TabStop = false;
+            pictureBox8.Click += pictureBox8_Click;
             // 
             // materialTabSelector1
             // 
@@ -1173,6 +1187,7 @@
             oficinasGridView.Name = "oficinasGridView";
             oficinasGridView.Size = new Size(1008, 473);
             oficinasGridView.TabIndex = 0;
+            oficinasGridView.CellContentClick += oficinasGridView_CellContentClick;
             // 
             // añadirOficinaButton
             // 
@@ -1207,6 +1222,7 @@
             // panel12
             // 
             panel12.BackColor = Color.RoyalBlue;
+            panel12.Controls.Add(pictureBox9);
             panel12.Controls.Add(materialTabSelector2);
             panel12.Dock = DockStyle.Top;
             panel12.Location = new Point(0, 0);
@@ -1227,17 +1243,17 @@
             materialTabSelector2.TabIndex = 1;
             materialTabSelector2.Text = "materialTabSelector1";
             // 
-            // pictureBox8
+            // pictureBox9
             // 
-            pictureBox8.Cursor = Cursors.Hand;
-            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(79, 52);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(43, 40);
-            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox8.TabIndex = 10;
-            pictureBox8.TabStop = false;
-            pictureBox8.Click += pictureBox8_Click;
+            pictureBox9.Cursor = Cursors.Hand;
+            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
+            pictureBox9.Location = new Point(79, 52);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(43, 40);
+            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox9.TabIndex = 11;
+            pictureBox9.TabStop = false;
+            pictureBox9.Click += pictureBox9_Click;
             // 
             // AdminMainPage
             // 
@@ -1256,6 +1272,7 @@
             panel16.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)propietariosGridView).EndInit();
             panel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             tabPage2.ResumeLayout(false);
             inmueblesLayoutPanel.ResumeLayout(false);
             materialCard1.ResumeLayout(false);
@@ -1302,7 +1319,7 @@
             panel15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)oficinasGridView).EndInit();
             panel12.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ResumeLayout(false);
         }
 
@@ -1400,5 +1417,6 @@
         private Label label43;
         private PictureBox refreshButton;
         private PictureBox pictureBox8;
+        private PictureBox pictureBox9;
     }
 }

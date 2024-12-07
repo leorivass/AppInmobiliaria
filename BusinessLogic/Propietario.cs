@@ -140,6 +140,7 @@ namespace BusinessLogic
                 dat.Load(reader);
                 propietariosGridView.AutoGenerateColumns = true;
                 propietariosGridView.DataSource = dat;
+                propietariosGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 reader.Close();
 
                 

@@ -95,5 +95,29 @@ namespace BusinessLogic
                 throw;
             }
         }
+        public void CargarOficinas(DataGridView oficinasGridView)
+        {
+            DataTable dat = new DataTable();
+            try
+            {
+
+                string consulta = "select * from Oficina";
+                DA db = new DA();
+                db.connection.Open();
+                SqlCommand command = new SqlCommand(consulta, db.connection);
+                SqlDataReader reader = command.ExecuteReader();
+                dat.Load(reader);
+                oficinasGridView.AutoGenerateColumns = true;
+                oficinasGridView.DataSource = dat;
+                oficinasGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                reader.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
     }
 }

@@ -61,6 +61,8 @@ namespace Presentation
         {
             Propietario propietario = new Propietario();
             propietario.CargarPropietarios(propietariosGridView);
+            Oficina oficina = new Oficina();
+            oficina.CargarOficinas(oficinasGridView);
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
@@ -68,5 +70,19 @@ namespace Presentation
             Propietario propietario = new Propietario();
             propietario.CargarPropietarios(propietariosGridView);
         }
+
+        private void oficinasGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            Oficina oficina = new Oficina();
+            oficina.CargarOficinas(oficinasGridView);
+        }
     }
+
 }
+
