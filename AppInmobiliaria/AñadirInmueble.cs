@@ -1,4 +1,7 @@
 ﻿using BusinessLogic;
+using System.Configuration;
+using Azure.Storage.Blobs;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,15 +12,66 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Presentation
 {
     public partial class AñadirInmueble : Form
     {
+        private string office;
+        private string imagePath = string.Empty;
+        private string blobConnectionString = ConfigurationManager.ConnectionStrings["BLOBString"].ConnectionString;
+        private string container = "estateimages";
+
         public AñadirInmueble()
         {
             InitializeComponent();
             CargarOficinas();
             CargarPropietarios();
+        }
+        private string subirImagenAzure()
+        {
+            try
+            {
+                // Crear un cliente de blob para el contenedor
+                BlobServiceClient blobServiceClient = new BlobServiceClient(blobConnectionString);
+                BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(container);
+
+                // Asegurarse de que el contenedor exista
+                containerClient.CreateIfNotExists();
+
+                // Obtener el nombre del archivo
+                string nombreArchivo = Path.GetFileName(imagePath);
+
+                // Crear un cliente para el blob
+                BlobClient blobClient = containerClient.GetBlobClient(nombreArchivo);
+
+                // Subir el archivo
+                using (FileStream stream = File.OpenRead(imagePath))
+                {
+                    blobClient.Upload(stream, true);
+                }
+
+                // Devolver la URL pública del blob
+                return blobClient.Uri.ToString();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+        private void subirImagenButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.Filter = "Archivos de imagen|*.jpg; *.jpeg; *.png; *.gif; *.bmp|Todos los archivos|*.*";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                imagePath = openFileDialog.FileName;
+                imagenInmueble.Image = Image.FromFile(imagePath);
+                imagenInmueble.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+
         }
         private void CargarOficinas()
         {
@@ -58,8 +112,9 @@ namespace Presentation
                 inmueble.precio_alquiler = float.Parse(precioAlquiler.Text);
                 inmueble.direccion = direccion.Text;
                 inmueble.metros_cuadrados = float.Parse(area.Text);
+                inmueble.ruta_foto = subirImagenAzure();
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 throw;
             }

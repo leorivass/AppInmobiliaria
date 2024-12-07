@@ -23,7 +23,7 @@ namespace BusinessLogic
         {
             try
             {
-                string query = "insert into Inmueble (id_oficina, id_propietario, precio_venta, precio_alquiler, direccion, metros_cuadrados) values (@id_oficina, @id_propietario, @precio_venta, @precio_alquiler, @direccion, @metros_cuadrados)";
+                string query = "insert into Inmueble (id_oficina, id_propietario, precio_venta, precio_alquiler, direccion, metros_cuadrados, ruta_foto) values (@id_oficina, @id_propietario, @precio_venta, @precio_alquiler, @direccion, @metros_cuadrados, @ruta_foto)";
 
                 DA dbAccess = new DA();
 
@@ -35,7 +35,7 @@ namespace BusinessLogic
                 cmd.Parameters.AddWithValue("@precio_alquiler", precio_alquiler);
                 cmd.Parameters.AddWithValue("@direccion", direccion);
                 cmd.Parameters.AddWithValue("@metros_cuadrados", metros_cuadrados);
-                //cmd.Parameters.AddWithValue("@ruta_foto", ruta_foto);
+                cmd.Parameters.AddWithValue("@ruta_foto", ruta_foto);
 
                 dbAccess.ExecuteQuery(cmd);
 

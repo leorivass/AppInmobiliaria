@@ -32,7 +32,7 @@
             materialCard3 = new MaterialSkin.Controls.MaterialCard();
             oficinaComboBox = new MaterialSkin.Controls.MaterialComboBox();
             materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            pictureBox1 = new PictureBox();
+            imagenInmueble = new PictureBox();
             subirImagenButton = new MaterialSkin.Controls.MaterialButton();
             cancelarButton = new MaterialSkin.Controls.MaterialButton();
             continuarButton = new MaterialSkin.Controls.MaterialButton();
@@ -46,7 +46,7 @@
             panel3.SuspendLayout();
             materialCard3.SuspendLayout();
             materialCard1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)imagenInmueble).BeginInit();
             SuspendLayout();
             // 
             // panel3
@@ -111,7 +111,7 @@
             // materialCard1
             // 
             materialCard1.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard1.Controls.Add(pictureBox1);
+            materialCard1.Controls.Add(imagenInmueble);
             materialCard1.Depth = 0;
             materialCard1.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialCard1.Location = new Point(590, 77);
@@ -122,14 +122,14 @@
             materialCard1.Size = new Size(220, 180);
             materialCard1.TabIndex = 11;
             // 
-            // pictureBox1
+            // imagenInmueble
             // 
-            pictureBox1.Location = new Point(17, 17);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(186, 146);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            imagenInmueble.Location = new Point(17, 17);
+            imagenInmueble.Name = "imagenInmueble";
+            imagenInmueble.Size = new Size(186, 146);
+            imagenInmueble.SizeMode = PictureBoxSizeMode.StretchImage;
+            imagenInmueble.TabIndex = 0;
+            imagenInmueble.TabStop = false;
             // 
             // subirImagenButton
             // 
@@ -150,6 +150,7 @@
             subirImagenButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             subirImagenButton.UseAccentColor = false;
             subirImagenButton.UseVisualStyleBackColor = true;
+            subirImagenButton.Click += subirImagenButton_Click;
             // 
             // cancelarButton
             // 
@@ -380,7 +381,7 @@
             materialCard3.ResumeLayout(false);
             materialCard3.PerformLayout();
             materialCard1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)imagenInmueble).EndInit();
             ResumeLayout(false);
         }
 
@@ -398,7 +399,7 @@
         private MaterialSkin.Controls.MaterialButton cancelarButton;
         private MaterialSkin.Controls.MaterialButton continuarButton;
         private MaterialSkin.Controls.MaterialCard materialCard1;
-        private PictureBox pictureBox1;
+        private PictureBox imagenInmueble;
         private MaterialSkin.Controls.MaterialComboBox oficinaComboBox;
     }
 }
