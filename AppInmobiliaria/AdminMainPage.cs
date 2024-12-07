@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataAccess;
+using Microsoft.Data.SqlClient;
+
 
 namespace Presentation
 {
@@ -30,6 +33,7 @@ namespace Presentation
             CargarOficinas();
         }
 
+
         private void añadirPropietarioButton_Click(object sender, EventArgs e)
         {
             AñadirPropietario añadirpropietario = new AñadirPropietario();
@@ -46,6 +50,23 @@ namespace Presentation
         {
             AñadirInmueble añadirinmueble = new AñadirInmueble();
             añadirinmueble.ShowDialog();
+        }
+
+        private void propietariosGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void AdminMainPage_Load(object sender, EventArgs e)
+        {
+            Propietario propietario = new Propietario();
+            propietario.CargarPropietarios(propietariosGridView);
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            Propietario propietario = new Propietario();
+            propietario.CargarPropietarios(propietariosGridView);
         }
     }
 }

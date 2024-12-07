@@ -126,5 +126,29 @@ namespace BusinessLogic
                 throw;
             }
         }
+        public void CargarPropietarios(DataGridView propietariosGridView)
+        {
+            DataTable dat = new DataTable();
+            try
+            {
+
+                string consulta = "select * from Propietario";
+                DA db = new DA();
+                db.connection.Open();
+                SqlCommand command = new SqlCommand(consulta, db.connection);
+                SqlDataReader reader = command.ExecuteReader();
+                dat.Load(reader);
+                propietariosGridView.AutoGenerateColumns = true;
+                propietariosGridView.DataSource = dat;
+                reader.Close();
+
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
     }
 }
