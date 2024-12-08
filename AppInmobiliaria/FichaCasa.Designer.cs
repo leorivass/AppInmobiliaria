@@ -39,20 +39,20 @@
             materialTextBox210 = new MaterialSkin.Controls.MaterialTextBox2();
             materialTextBox211 = new MaterialSkin.Controls.MaterialTextBox2();
             panel1 = new Panel();
-            panel2 = new Panel();
-            label1 = new Label();
-            materialTextBox29 = new MaterialSkin.Controls.MaterialTextBox2();
+            dataGridView1 = new DataGridView();
+            label2 = new Label();
             materialCheckedListBox1 = new MaterialSkin.Controls.MaterialCheckedListBox();
             materialCheckbox4 = new MaterialSkin.Controls.MaterialCheckbox();
             materialCheckbox3 = new MaterialSkin.Controls.MaterialCheckbox();
             materialCheckbox2 = new MaterialSkin.Controls.MaterialCheckbox();
             materialCheckbox1 = new MaterialSkin.Controls.MaterialCheckbox();
-            dataGridView1 = new DataGridView();
-            label2 = new Label();
+            panel2 = new Panel();
+            label1 = new Label();
+            materialTextBox29 = new MaterialSkin.Controls.MaterialTextBox2();
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            materialCheckedListBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            materialCheckedListBox1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // materialTextBox21
@@ -388,55 +388,23 @@
             panel1.Size = new Size(734, 759);
             panel1.TabIndex = 13;
             // 
-            // panel2
+            // dataGridView1
             // 
-            panel2.BackColor = Color.LightCoral;
-            panel2.Controls.Add(label1);
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(734, 67);
-            panel2.TabIndex = 20;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(58, 542);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(625, 191);
+            dataGridView1.TabIndex = 24;
             // 
-            // label1
+            // label2
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Lucida Fax", 20F);
-            label1.Location = new Point(322, 18);
-            label1.Name = "label1";
-            label1.Size = new Size(96, 32);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
-            // 
-            // materialTextBox29
-            // 
-            materialTextBox29.AnimateReadOnly = false;
-            materialTextBox29.BackgroundImageLayout = ImageLayout.None;
-            materialTextBox29.CharacterCasing = CharacterCasing.Normal;
-            materialTextBox29.Depth = 0;
-            materialTextBox29.Enabled = false;
-            materialTextBox29.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox29.HideSelection = true;
-            materialTextBox29.Hint = "Zona";
-            materialTextBox29.LeadingIcon = null;
-            materialTextBox29.Location = new Point(44, 440);
-            materialTextBox29.MaxLength = 32767;
-            materialTextBox29.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox29.Name = "materialTextBox29";
-            materialTextBox29.PasswordChar = '\0';
-            materialTextBox29.PrefixSuffixText = null;
-            materialTextBox29.ReadOnly = false;
-            materialTextBox29.RightToLeft = RightToLeft.No;
-            materialTextBox29.SelectedText = "";
-            materialTextBox29.SelectionLength = 0;
-            materialTextBox29.SelectionStart = 0;
-            materialTextBox29.ShortcutsEnabled = true;
-            materialTextBox29.Size = new Size(250, 48);
-            materialTextBox29.TabIndex = 13;
-            materialTextBox29.TabStop = false;
-            materialTextBox29.Text = "materialTextBox29";
-            materialTextBox29.TextAlign = HorizontalAlignment.Left;
-            materialTextBox29.TrailingIcon = null;
-            materialTextBox29.UseSystemPasswordChar = false;
+            label2.AutoSize = true;
+            label2.Font = new Font("Lucida Fax", 20F);
+            label2.Location = new Point(322, 500);
+            label2.Name = "label2";
+            label2.Size = new Size(105, 32);
+            label2.TabIndex = 23;
+            label2.Text = "Visitas";
             // 
             // materialCheckedListBox1
             // 
@@ -523,23 +491,55 @@
             materialCheckbox1.Text = "Salón";
             materialCheckbox1.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // panel2
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(58, 542);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(625, 191);
-            dataGridView1.TabIndex = 24;
+            panel2.BackColor = Color.LightCoral;
+            panel2.Controls.Add(label1);
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(734, 67);
+            panel2.TabIndex = 20;
             // 
-            // label2
+            // label1
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Lucida Fax", 20F);
-            label2.Location = new Point(322, 500);
-            label2.Name = "label2";
-            label2.Size = new Size(105, 32);
-            label2.TabIndex = 23;
-            label2.Text = "Visitas";
+            label1.AutoSize = true;
+            label1.Font = new Font("Lucida Fax", 20F);
+            label1.Location = new Point(322, 18);
+            label1.Name = "label1";
+            label1.Size = new Size(96, 32);
+            label1.TabIndex = 0;
+            label1.Text = "label1";
+            // 
+            // materialTextBox29
+            // 
+            materialTextBox29.AnimateReadOnly = false;
+            materialTextBox29.BackgroundImageLayout = ImageLayout.None;
+            materialTextBox29.CharacterCasing = CharacterCasing.Normal;
+            materialTextBox29.Depth = 0;
+            materialTextBox29.Enabled = false;
+            materialTextBox29.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialTextBox29.HideSelection = true;
+            materialTextBox29.Hint = "Zona";
+            materialTextBox29.LeadingIcon = null;
+            materialTextBox29.Location = new Point(44, 440);
+            materialTextBox29.MaxLength = 32767;
+            materialTextBox29.MouseState = MaterialSkin.MouseState.OUT;
+            materialTextBox29.Name = "materialTextBox29";
+            materialTextBox29.PasswordChar = '\0';
+            materialTextBox29.PrefixSuffixText = null;
+            materialTextBox29.ReadOnly = false;
+            materialTextBox29.RightToLeft = RightToLeft.No;
+            materialTextBox29.SelectedText = "";
+            materialTextBox29.SelectionLength = 0;
+            materialTextBox29.SelectionStart = 0;
+            materialTextBox29.ShortcutsEnabled = true;
+            materialTextBox29.Size = new Size(250, 48);
+            materialTextBox29.TabIndex = 13;
+            materialTextBox29.TabStop = false;
+            materialTextBox29.Text = "materialTextBox29";
+            materialTextBox29.TextAlign = HorizontalAlignment.Left;
+            materialTextBox29.TrailingIcon = null;
+            materialTextBox29.UseSystemPasswordChar = false;
             // 
             // FichaCasa
             // 
@@ -548,14 +548,15 @@
             ClientSize = new Size(734, 759);
             Controls.Add(panel1);
             Name = "FichaCasa";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Ficha casa";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             materialCheckedListBox1.ResumeLayout(false);
             materialCheckedListBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
         }
 

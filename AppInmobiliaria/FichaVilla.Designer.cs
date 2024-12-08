@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            dataGridView1 = new DataGridView();
+            materialCheckedListBox1 = new MaterialSkin.Controls.MaterialCheckedListBox();
+            materialCheckbox4 = new MaterialSkin.Controls.MaterialCheckbox();
+            materialCheckbox3 = new MaterialSkin.Controls.MaterialCheckbox();
+            materialCheckbox2 = new MaterialSkin.Controls.MaterialCheckbox();
+            materialCheckbox1 = new MaterialSkin.Controls.MaterialCheckbox();
+            label2 = new Label();
             panel2 = new Panel();
             label1 = new Label();
             materialTextBox212 = new MaterialSkin.Controls.MaterialTextBox2();
@@ -43,17 +50,10 @@
             materialTextBox27 = new MaterialSkin.Controls.MaterialTextBox2();
             materialTextBox25 = new MaterialSkin.Controls.MaterialTextBox2();
             materialTextBox26 = new MaterialSkin.Controls.MaterialTextBox2();
-            materialCheckedListBox1 = new MaterialSkin.Controls.MaterialCheckedListBox();
-            materialCheckbox4 = new MaterialSkin.Controls.MaterialCheckbox();
-            materialCheckbox3 = new MaterialSkin.Controls.MaterialCheckbox();
-            materialCheckbox2 = new MaterialSkin.Controls.MaterialCheckbox();
-            materialCheckbox1 = new MaterialSkin.Controls.MaterialCheckbox();
-            dataGridView1 = new DataGridView();
-            label2 = new Label();
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            materialCheckedListBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            materialCheckedListBox1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -80,6 +80,109 @@
             panel1.Size = new Size(734, 826);
             panel1.TabIndex = 14;
             panel1.Paint += panel1_Paint;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(49, 613);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(620, 191);
+            dataGridView1.TabIndex = 26;
+            // 
+            // materialCheckedListBox1
+            // 
+            materialCheckedListBox1.AutoScroll = true;
+            materialCheckedListBox1.BackColor = SystemColors.Control;
+            materialCheckedListBox1.Controls.Add(materialCheckbox4);
+            materialCheckedListBox1.Controls.Add(materialCheckbox3);
+            materialCheckedListBox1.Controls.Add(materialCheckbox2);
+            materialCheckedListBox1.Controls.Add(materialCheckbox1);
+            materialCheckedListBox1.Depth = 0;
+            materialCheckedListBox1.Location = new Point(186, 504);
+            materialCheckedListBox1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialCheckedListBox1.Name = "materialCheckedListBox1";
+            materialCheckedListBox1.Size = new Size(364, 54);
+            materialCheckedListBox1.Striped = false;
+            materialCheckedListBox1.StripeDarkColor = Color.Empty;
+            materialCheckedListBox1.TabIndex = 22;
+            // 
+            // materialCheckbox4
+            // 
+            materialCheckbox4.AutoSize = true;
+            materialCheckbox4.Depth = 0;
+            materialCheckbox4.Enabled = false;
+            materialCheckbox4.Location = new Point(88, 11);
+            materialCheckbox4.Margin = new Padding(0);
+            materialCheckbox4.MouseLocation = new Point(-1, -1);
+            materialCheckbox4.MouseState = MaterialSkin.MouseState.HOVER;
+            materialCheckbox4.Name = "materialCheckbox4";
+            materialCheckbox4.ReadOnly = false;
+            materialCheckbox4.Ripple = true;
+            materialCheckbox4.Size = new Size(119, 37);
+            materialCheckbox4.TabIndex = 3;
+            materialCheckbox4.Text = "Calefacción";
+            materialCheckbox4.UseVisualStyleBackColor = true;
+            // 
+            // materialCheckbox3
+            // 
+            materialCheckbox3.AutoSize = true;
+            materialCheckbox3.Depth = 0;
+            materialCheckbox3.Enabled = false;
+            materialCheckbox3.Location = new Point(207, 11);
+            materialCheckbox3.Margin = new Padding(0);
+            materialCheckbox3.MouseLocation = new Point(-1, -1);
+            materialCheckbox3.MouseState = MaterialSkin.MouseState.HOVER;
+            materialCheckbox3.Name = "materialCheckbox3";
+            materialCheckbox3.ReadOnly = false;
+            materialCheckbox3.Ripple = true;
+            materialCheckbox3.Size = new Size(63, 37);
+            materialCheckbox3.TabIndex = 2;
+            materialCheckbox3.Text = "Gas";
+            materialCheckbox3.UseVisualStyleBackColor = true;
+            // 
+            // materialCheckbox2
+            // 
+            materialCheckbox2.AutoSize = true;
+            materialCheckbox2.Depth = 0;
+            materialCheckbox2.Enabled = false;
+            materialCheckbox2.Location = new Point(270, 11);
+            materialCheckbox2.Margin = new Padding(0);
+            materialCheckbox2.MouseLocation = new Point(-1, -1);
+            materialCheckbox2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialCheckbox2.Name = "materialCheckbox2";
+            materialCheckbox2.ReadOnly = false;
+            materialCheckbox2.Ripple = true;
+            materialCheckbox2.Size = new Size(81, 37);
+            materialCheckbox2.TabIndex = 1;
+            materialCheckbox2.Text = "Garaje";
+            materialCheckbox2.UseVisualStyleBackColor = true;
+            // 
+            // materialCheckbox1
+            // 
+            materialCheckbox1.AutoSize = true;
+            materialCheckbox1.Depth = 0;
+            materialCheckbox1.Enabled = false;
+            materialCheckbox1.Location = new Point(12, 11);
+            materialCheckbox1.Margin = new Padding(0);
+            materialCheckbox1.MouseLocation = new Point(-1, -1);
+            materialCheckbox1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialCheckbox1.Name = "materialCheckbox1";
+            materialCheckbox1.ReadOnly = false;
+            materialCheckbox1.Ripple = true;
+            materialCheckbox1.Size = new Size(76, 37);
+            materialCheckbox1.TabIndex = 0;
+            materialCheckbox1.Text = "Salón";
+            materialCheckbox1.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Lucida Fax", 20F);
+            label2.Location = new Point(313, 571);
+            label2.Name = "label2";
+            label2.Size = new Size(105, 32);
+            label2.TabIndex = 25;
+            label2.Text = "Visitas";
             // 
             // panel2
             // 
@@ -472,109 +575,6 @@
             materialTextBox26.TrailingIcon = null;
             materialTextBox26.UseSystemPasswordChar = false;
             // 
-            // materialCheckedListBox1
-            // 
-            materialCheckedListBox1.AutoScroll = true;
-            materialCheckedListBox1.BackColor = SystemColors.Control;
-            materialCheckedListBox1.Controls.Add(materialCheckbox4);
-            materialCheckedListBox1.Controls.Add(materialCheckbox3);
-            materialCheckedListBox1.Controls.Add(materialCheckbox2);
-            materialCheckedListBox1.Controls.Add(materialCheckbox1);
-            materialCheckedListBox1.Depth = 0;
-            materialCheckedListBox1.Location = new Point(186, 504);
-            materialCheckedListBox1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCheckedListBox1.Name = "materialCheckedListBox1";
-            materialCheckedListBox1.Size = new Size(364, 54);
-            materialCheckedListBox1.Striped = false;
-            materialCheckedListBox1.StripeDarkColor = Color.Empty;
-            materialCheckedListBox1.TabIndex = 22;
-            // 
-            // materialCheckbox4
-            // 
-            materialCheckbox4.AutoSize = true;
-            materialCheckbox4.Depth = 0;
-            materialCheckbox4.Enabled = false;
-            materialCheckbox4.Location = new Point(88, 11);
-            materialCheckbox4.Margin = new Padding(0);
-            materialCheckbox4.MouseLocation = new Point(-1, -1);
-            materialCheckbox4.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCheckbox4.Name = "materialCheckbox4";
-            materialCheckbox4.ReadOnly = false;
-            materialCheckbox4.Ripple = true;
-            materialCheckbox4.Size = new Size(119, 37);
-            materialCheckbox4.TabIndex = 3;
-            materialCheckbox4.Text = "Calefacción";
-            materialCheckbox4.UseVisualStyleBackColor = true;
-            // 
-            // materialCheckbox3
-            // 
-            materialCheckbox3.AutoSize = true;
-            materialCheckbox3.Depth = 0;
-            materialCheckbox3.Enabled = false;
-            materialCheckbox3.Location = new Point(207, 11);
-            materialCheckbox3.Margin = new Padding(0);
-            materialCheckbox3.MouseLocation = new Point(-1, -1);
-            materialCheckbox3.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCheckbox3.Name = "materialCheckbox3";
-            materialCheckbox3.ReadOnly = false;
-            materialCheckbox3.Ripple = true;
-            materialCheckbox3.Size = new Size(63, 37);
-            materialCheckbox3.TabIndex = 2;
-            materialCheckbox3.Text = "Gas";
-            materialCheckbox3.UseVisualStyleBackColor = true;
-            // 
-            // materialCheckbox2
-            // 
-            materialCheckbox2.AutoSize = true;
-            materialCheckbox2.Depth = 0;
-            materialCheckbox2.Enabled = false;
-            materialCheckbox2.Location = new Point(270, 11);
-            materialCheckbox2.Margin = new Padding(0);
-            materialCheckbox2.MouseLocation = new Point(-1, -1);
-            materialCheckbox2.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCheckbox2.Name = "materialCheckbox2";
-            materialCheckbox2.ReadOnly = false;
-            materialCheckbox2.Ripple = true;
-            materialCheckbox2.Size = new Size(81, 37);
-            materialCheckbox2.TabIndex = 1;
-            materialCheckbox2.Text = "Garaje";
-            materialCheckbox2.UseVisualStyleBackColor = true;
-            // 
-            // materialCheckbox1
-            // 
-            materialCheckbox1.AutoSize = true;
-            materialCheckbox1.Depth = 0;
-            materialCheckbox1.Enabled = false;
-            materialCheckbox1.Location = new Point(12, 11);
-            materialCheckbox1.Margin = new Padding(0);
-            materialCheckbox1.MouseLocation = new Point(-1, -1);
-            materialCheckbox1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCheckbox1.Name = "materialCheckbox1";
-            materialCheckbox1.ReadOnly = false;
-            materialCheckbox1.Ripple = true;
-            materialCheckbox1.Size = new Size(76, 37);
-            materialCheckbox1.TabIndex = 0;
-            materialCheckbox1.Text = "Salón";
-            materialCheckbox1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(49, 613);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(620, 191);
-            dataGridView1.TabIndex = 26;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Lucida Fax", 20F);
-            label2.Location = new Point(313, 571);
-            label2.Name = "label2";
-            label2.Size = new Size(105, 32);
-            label2.TabIndex = 25;
-            label2.Text = "Visitas";
-            // 
             // FichaVilla
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -582,14 +582,15 @@
             ClientSize = new Size(734, 826);
             Controls.Add(panel1);
             Name = "FichaVilla";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FichaVilla";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             materialCheckedListBox1.ResumeLayout(false);
             materialCheckedListBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
         }
 

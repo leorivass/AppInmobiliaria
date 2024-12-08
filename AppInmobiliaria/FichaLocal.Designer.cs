@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            dataGridView1 = new DataGridView();
+            label2 = new Label();
             panel2 = new Panel();
             label1 = new Label();
             materialTextBox29 = new MaterialSkin.Controls.MaterialTextBox2();
@@ -46,12 +48,10 @@
             materialTextBox27 = new MaterialSkin.Controls.MaterialTextBox2();
             materialTextBox25 = new MaterialSkin.Controls.MaterialTextBox2();
             materialTextBox26 = new MaterialSkin.Controls.MaterialTextBox2();
-            dataGridView1 = new DataGridView();
-            label2 = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
             materialCheckedListBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -74,6 +74,24 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(734, 763);
             panel1.TabIndex = 15;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(49, 546);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(625, 191);
+            dataGridView1.TabIndex = 26;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Lucida Fax", 20F);
+            label2.Location = new Point(313, 504);
+            label2.Name = "label2";
+            label2.Size = new Size(105, 32);
+            label2.TabIndex = 25;
+            label2.Text = "Visitas";
             // 
             // panel2
             // 
@@ -476,24 +494,6 @@
             materialTextBox26.TrailingIcon = null;
             materialTextBox26.UseSystemPasswordChar = false;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(49, 546);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(625, 191);
-            dataGridView1.TabIndex = 26;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Lucida Fax", 20F);
-            label2.Location = new Point(313, 504);
-            label2.Name = "label2";
-            label2.Size = new Size(105, 32);
-            label2.TabIndex = 25;
-            label2.Text = "Visitas";
-            // 
             // FichaLocal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -501,14 +501,15 @@
             ClientSize = new Size(734, 763);
             Controls.Add(panel1);
             Name = "FichaLocal";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FichaLocal";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             materialCheckedListBox1.ResumeLayout(false);
             materialCheckedListBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
