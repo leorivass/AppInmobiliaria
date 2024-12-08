@@ -153,7 +153,6 @@ namespace Presentation
             VerFicha.ShowDialog();
         }
 
-
         private void refreshButton_Click(object sender, EventArgs e)
         {
             CargarOficinas();
@@ -189,6 +188,9 @@ namespace Presentation
             Cliente cliente = new Cliente();
             cliente.CargarClientes(dataGridView1);
             dataGridView1.ReadOnly = false;
+            Visita visita = new Visita();
+            visita.CargarVisitas(dataGridView2);
+            dataGridView2.ReadOnly = false;
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
@@ -239,11 +241,6 @@ namespace Presentation
             {
                 MessageBox.Show("Error al eliminar oficina: " + ex.Message);
             }
-        }
-
-        private void panel14_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void materialButton2_Click(object sender, EventArgs e)
@@ -392,6 +389,37 @@ namespace Presentation
         {
             Cliente cliente = new Cliente();
             cliente.CargarClientes(dataGridView1);
+        }
+
+        private void añadirVisitaButton_Click(object sender, EventArgs e)
+        {
+            AñadirVisita añadirvisita = new AñadirVisita();
+            añadirvisita.ShowDialog();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Visita visita = new Visita();
+            visita.CargarVisitas(dataGridView2);
+        }
+
+        private void eliminarButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Visita visita = new Visita();
+                DataGridViewRow selectedRow = dataGridView2.SelectedRows[0];
+
+                int id = Convert.ToInt32(selectedRow.Cells["ID"].Value);
+
+
+                visita.DeleteVisita(id);
+                MessageBox.Show("Visita eliminada correctamente.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar el visita: " + ex.Message);
+            }
         }
     }
 }

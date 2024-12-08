@@ -66,38 +66,6 @@ namespace BusinessLogic
                 throw;
             }
         }
-        public int? GetID()
-        {
-            try
-            {
-                string query = "select id from Propietario where nombre=@nombre and telefono=@telefono";
-
-                DA dbAccess = new DA();
-
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = query;
-                cmd.Parameters.AddWithValue("@nombre", nombre);
-                cmd.Parameters.AddWithValue("@telefono", telefono);
-
-                SqlDataReader reader = dbAccess.GetConsult(cmd);
-
-                if (reader.Read())
-                {
-                    int ID = reader.GetInt32(0);
-                    dbAccess.connection.Close();
-                    return ID;
-                }
-                else
-                {
-                    dbAccess.connection.Close();
-                    return null;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
-        }
         public DataTable GetAllOwners()
         {
             DataTable dt = new DataTable();

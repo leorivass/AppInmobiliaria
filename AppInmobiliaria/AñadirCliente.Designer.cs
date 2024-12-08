@@ -201,7 +201,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Yu Gothic UI Semibold", 20F);
-            label1.Location = new Point(253, 34);
+            label1.Location = new Point(276, 35);
             label1.Name = "label1";
             label1.Size = new Size(224, 37);
             label1.TabIndex = 7;

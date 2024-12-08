@@ -36,6 +36,7 @@ namespace Presentation
             materialCheckbox3.Checked = (bool)propiedad.agua;
             materialCheckbox4.Checked = (bool)propiedad.luz;
             materialCheckbox5.Checked = (bool)propiedad.estaAcondicionado;
+            dataGridView1.DataSource = propiedad.GetVisitas(propiedad.idInmueble);
 
             return;
         }

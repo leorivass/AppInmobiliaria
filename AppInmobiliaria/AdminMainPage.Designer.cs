@@ -71,10 +71,9 @@
             materialTabSelector4 = new MaterialSkin.Controls.MaterialTabSelector();
             tabPage5 = new TabPage();
             panel8 = new Panel();
-            materialButton6 = new MaterialSkin.Controls.MaterialButton();
-            materialButton7 = new MaterialSkin.Controls.MaterialButton();
+            eliminarButton = new MaterialSkin.Controls.MaterialButton();
             dataGridView2 = new DataGridView();
-            materialButton8 = new MaterialSkin.Controls.MaterialButton();
+            añadirVisitaButton = new MaterialSkin.Controls.MaterialButton();
             panel6 = new Panel();
             pictureBox2 = new PictureBox();
             panel2 = new Panel();
@@ -337,7 +336,6 @@
             panel14.Name = "panel14";
             panel14.Size = new Size(1024, 76);
             panel14.TabIndex = 4;
-            panel14.Paint += panel14_Paint;
             // 
             // pictureBox9
             // 
@@ -669,55 +667,35 @@
             // 
             // panel8
             // 
-            panel8.Controls.Add(materialButton6);
-            panel8.Controls.Add(materialButton7);
+            panel8.Controls.Add(eliminarButton);
             panel8.Controls.Add(dataGridView2);
-            panel8.Controls.Add(materialButton8);
+            panel8.Controls.Add(añadirVisitaButton);
             panel8.Dock = DockStyle.Fill;
             panel8.Location = new Point(0, 100);
             panel8.Name = "panel8";
             panel8.Size = new Size(1024, 528);
             panel8.TabIndex = 8;
             // 
-            // materialButton6
+            // eliminarButton
             // 
-            materialButton6.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton6.Cursor = Cursors.Hand;
-            materialButton6.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            materialButton6.Depth = 0;
-            materialButton6.HighEmphasis = true;
-            materialButton6.Icon = null;
-            materialButton6.Location = new Point(763, 488);
-            materialButton6.Margin = new Padding(4, 6, 4, 6);
-            materialButton6.MouseState = MaterialSkin.MouseState.HOVER;
-            materialButton6.Name = "materialButton6";
-            materialButton6.NoAccentTextColor = Color.Empty;
-            materialButton6.Size = new Size(71, 36);
-            materialButton6.TabIndex = 3;
-            materialButton6.Text = "Editar";
-            materialButton6.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton6.UseAccentColor = false;
-            materialButton6.UseVisualStyleBackColor = true;
-            // 
-            // materialButton7
-            // 
-            materialButton7.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton7.Cursor = Cursors.Hand;
-            materialButton7.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            materialButton7.Depth = 0;
-            materialButton7.HighEmphasis = true;
-            materialButton7.Icon = null;
-            materialButton7.Location = new Point(927, 488);
-            materialButton7.Margin = new Padding(4, 6, 4, 6);
-            materialButton7.MouseState = MaterialSkin.MouseState.HOVER;
-            materialButton7.Name = "materialButton7";
-            materialButton7.NoAccentTextColor = Color.Empty;
-            materialButton7.Size = new Size(88, 36);
-            materialButton7.TabIndex = 1;
-            materialButton7.Text = "Eliminar";
-            materialButton7.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton7.UseAccentColor = false;
-            materialButton7.UseVisualStyleBackColor = true;
+            eliminarButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            eliminarButton.Cursor = Cursors.Hand;
+            eliminarButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            eliminarButton.Depth = 0;
+            eliminarButton.HighEmphasis = true;
+            eliminarButton.Icon = null;
+            eliminarButton.Location = new Point(927, 488);
+            eliminarButton.Margin = new Padding(4, 6, 4, 6);
+            eliminarButton.MouseState = MaterialSkin.MouseState.HOVER;
+            eliminarButton.Name = "eliminarButton";
+            eliminarButton.NoAccentTextColor = Color.Empty;
+            eliminarButton.Size = new Size(88, 36);
+            eliminarButton.TabIndex = 1;
+            eliminarButton.Text = "Eliminar";
+            eliminarButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            eliminarButton.UseAccentColor = false;
+            eliminarButton.UseVisualStyleBackColor = true;
+            eliminarButton.Click += eliminarButton_Click;
             // 
             // dataGridView2
             // 
@@ -727,25 +705,26 @@
             dataGridView2.Size = new Size(1008, 473);
             dataGridView2.TabIndex = 0;
             // 
-            // materialButton8
+            // añadirVisitaButton
             // 
-            materialButton8.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton8.Cursor = Cursors.Hand;
-            materialButton8.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            materialButton8.Depth = 0;
-            materialButton8.HighEmphasis = true;
-            materialButton8.Icon = null;
-            materialButton8.Location = new Point(845, 488);
-            materialButton8.Margin = new Padding(4, 6, 4, 6);
-            materialButton8.MouseState = MaterialSkin.MouseState.HOVER;
-            materialButton8.Name = "materialButton8";
-            materialButton8.NoAccentTextColor = Color.Empty;
-            materialButton8.Size = new Size(74, 36);
-            materialButton8.TabIndex = 2;
-            materialButton8.Text = "Añadir";
-            materialButton8.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton8.UseAccentColor = false;
-            materialButton8.UseVisualStyleBackColor = true;
+            añadirVisitaButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            añadirVisitaButton.Cursor = Cursors.Hand;
+            añadirVisitaButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            añadirVisitaButton.Depth = 0;
+            añadirVisitaButton.HighEmphasis = true;
+            añadirVisitaButton.Icon = null;
+            añadirVisitaButton.Location = new Point(845, 488);
+            añadirVisitaButton.Margin = new Padding(4, 6, 4, 6);
+            añadirVisitaButton.MouseState = MaterialSkin.MouseState.HOVER;
+            añadirVisitaButton.Name = "añadirVisitaButton";
+            añadirVisitaButton.NoAccentTextColor = Color.Empty;
+            añadirVisitaButton.Size = new Size(74, 36);
+            añadirVisitaButton.TabIndex = 2;
+            añadirVisitaButton.Text = "Añadir";
+            añadirVisitaButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            añadirVisitaButton.UseAccentColor = false;
+            añadirVisitaButton.UseVisualStyleBackColor = true;
+            añadirVisitaButton.Click += añadirVisitaButton_Click;
             // 
             // panel6
             // 
@@ -767,6 +746,7 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 11;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // panel2
             // 
@@ -887,10 +867,9 @@
         private MaterialSkin.Controls.MaterialButton materialButton5;
         private MaterialSkin.Controls.MaterialTabSelector materialTabSelector4;
         private Panel panel8;
-        private MaterialSkin.Controls.MaterialButton materialButton6;
-        private MaterialSkin.Controls.MaterialButton materialButton7;
+        private MaterialSkin.Controls.MaterialButton eliminarButton;
         private DataGridView dataGridView2;
-        private MaterialSkin.Controls.MaterialButton materialButton8;
+        private MaterialSkin.Controls.MaterialButton añadirVisitaButton;
         private MaterialSkin.Controls.MaterialTabSelector materialTabSelector5;
     }
 }

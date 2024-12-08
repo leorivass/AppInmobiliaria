@@ -18,7 +18,6 @@ namespace BusinessLogic
         public string? direccion { get; set; }
         public float metros_cuadrados { get; set; }
         public string? ruta_foto { get; set; }
-        public int REF { get; set; }
 
         public int Add()
         {
@@ -39,6 +38,37 @@ namespace BusinessLogic
                 cmd.Parameters.AddWithValue("@ruta_foto", ruta_foto);
 
                 return dbAccess.ExecuteAndGetID(cmd);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public bool DoesThisPropertyExist(int id)
+        {
+            try
+            {
+                string query = "select id from Inmueble where id=@id";
+
+                DA dbAccess = new DA();
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = query;
+                cmd.Parameters.AddWithValue("@id", id);
+
+                SqlDataReader reader = dbAccess.GetConsult(cmd);
+
+                if (reader.HasRows)
+                {
+                    dbAccess.connection.Close();
+                    return true;
+                }
+                else
+                {
+                    dbAccess.connection.Close();
+                    return false;
+                }
             }
             catch (Exception ex)
             {

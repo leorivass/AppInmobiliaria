@@ -36,13 +36,9 @@ namespace Presentation
             materialCheckbox4.Checked = (bool)propiedad.calefaccion;
             materialTextBox212.Text = propiedad.parcela;
             materialTextBox29.Text = propiedad.zona;
+            dataGridView1.DataSource = propiedad.GetVisitas(propiedad.idInmueble);
 
             return;
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

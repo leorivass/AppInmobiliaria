@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace BusinessLogic
 {
@@ -256,6 +257,28 @@ namespace BusinessLogic
                 propiedades.Add(propiedad);
             }
             return propiedades;
+        }
+        public DataTable? GetVisitas(int idInmueble)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+
+                string consulta = "SELECT v. id, v.id_inmueble, c.nombre AS nombre, c.telefono AS telefono, v.comment, v.fecha, v.hora FROM Visitas v INNER JOIN Cliente c ON v.id_cliente = c.id WHERE id_inmueble=@id_inmueble";
+                DA db = new DA();
+                db.connection.Open();
+                SqlCommand command = new SqlCommand(consulta, db.connection);
+                command.Parameters.AddWithValue("@id_inmueble", idInmueble);
+                SqlDataReader reader = command.ExecuteReader();
+                dt.Load(reader);
+
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return null;
+            }
         }
     }
 }
