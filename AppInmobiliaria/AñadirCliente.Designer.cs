@@ -107,6 +107,7 @@
             cedulaCliente.TextAlign = HorizontalAlignment.Left;
             cedulaCliente.TrailingIcon = null;
             cedulaCliente.UseSystemPasswordChar = false;
+            cedulaCliente.TextChanged += cedulaCliente_TextChanged;
             // 
             // correoCliente
             // 
@@ -165,6 +166,7 @@
             telefonoCliente.TextAlign = HorizontalAlignment.Left;
             telefonoCliente.TrailingIcon = null;
             telefonoCliente.UseSystemPasswordChar = false;
+            telefonoCliente.TextChanged += telefonoCliente_TextChanged;
             // 
             // nombreCliente
             // 

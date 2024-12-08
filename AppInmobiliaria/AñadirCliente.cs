@@ -56,5 +56,53 @@ namespace Presentation
             }
 
         }
+        private void telefonoCliente_TextChanged(object sender, EventArgs e)
+        {
+            string telefonoFormateado = telefonoCliente.Text.Replace("-", "");
+
+            telefonoFormateado = new string(telefonoFormateado.Where(char.IsDigit).ToArray());
+
+            if (telefonoFormateado.Length >= 11)
+            {
+                telefonoFormateado = telefonoFormateado.Substring(0, 10);
+            }
+
+            if (telefonoFormateado.Length >= 4)
+            {
+                telefonoFormateado = telefonoFormateado.Insert(3, "-");
+            }
+            if (telefonoFormateado.Length >= 8)
+            {
+                telefonoFormateado = telefonoFormateado.Insert(7, "-");
+            }
+
+            telefonoCliente.Text = telefonoFormateado;
+            telefonoCliente.SelectionStart = telefonoCliente.Text.Length;
+        }
+
+        private void cedulaCliente_TextChanged(object sender, EventArgs e)
+        {
+            string cedulaFormateada = cedulaCliente.Text.Replace("-", "");
+
+            cedulaFormateada = new string(cedulaFormateada.Where(char.IsDigit).ToArray());
+
+            if (cedulaFormateada.Length >= 12)
+            {
+                cedulaFormateada = cedulaFormateada.Substring(0, 11);
+            }
+
+            if (cedulaFormateada.Length >= 4)
+            {
+                cedulaFormateada = cedulaFormateada.Insert(3, "-");
+            }
+
+            if (cedulaFormateada.Length >= 12)
+            {
+                cedulaFormateada = cedulaFormateada.Insert(11, "-");
+            }
+
+            cedulaCliente.Text = cedulaFormateada;
+            cedulaCliente.SelectionStart = cedulaCliente.Text.Length;
+        }
     }
 }

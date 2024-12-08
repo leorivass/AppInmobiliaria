@@ -23,7 +23,6 @@ namespace Presentation
 
         private void cedulaPropietario_TextChanged(object sender, EventArgs e)
         {
-
             string cedulaFormateada = cedulaPropietario.Text.Replace("-", "");
 
             cedulaFormateada = new string(cedulaFormateada.Where(char.IsDigit).ToArray());
