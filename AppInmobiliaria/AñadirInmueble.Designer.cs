@@ -1294,7 +1294,7 @@
             direccion.SelectionStart = 0;
             direccion.ShortcutsEnabled = true;
             direccion.Size = new Size(251, 48);
-            direccion.TabIndex = 4;
+            direccion.TabIndex = 2;
             direccion.TabStop = false;
             direccion.TextAlign = HorizontalAlignment.Left;
             direccion.TrailingIcon = null;
@@ -1352,7 +1352,7 @@
             area.SelectionStart = 0;
             area.ShortcutsEnabled = true;
             area.Size = new Size(251, 48);
-            area.TabIndex = 2;
+            area.TabIndex = 4;
             area.TabStop = false;
             area.TextAlign = HorizontalAlignment.Left;
             area.TrailingIcon = null;

@@ -174,6 +174,7 @@
             oficinaComboBox.Name = "oficinaComboBox";
             oficinaComboBox.Size = new Size(88, 23);
             oficinaComboBox.TabIndex = 8;
+            oficinaComboBox.SelectedIndexChanged += oficinaComboBox_SelectedIndexChanged;
             // 
             // añadirInmuebleButton
             // 

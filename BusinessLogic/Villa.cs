@@ -11,7 +11,7 @@ namespace BusinessLogic
     public class Villa
     {
         public int id { get; set; }
-        public string? parcela { get; set; }
+        public float parcela { get; set; }
         public string? urbanizacion { get; set; }
         public int id_vivienda { get; set; }
 

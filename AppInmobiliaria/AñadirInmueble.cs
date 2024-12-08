@@ -195,7 +195,7 @@ namespace Presentation
                         Villa villa = new Villa();
 
                         villa.urbanizacion = urbanizacionVilla.Text;
-                        villa.parcela = parcelaVilla.Text;
+                        villa.parcela = float.Parse(parcelaVilla.Text);
                         villa.id_vivienda = idVivienda;
 
                         codigo = villa.Add();
