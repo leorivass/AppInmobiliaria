@@ -30,23 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminPage));
             materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
-            tabPage1 = new TabPage();
-            panel16 = new Panel();
-            materialButton2 = new MaterialSkin.Controls.MaterialButton();
-            eliminarPropietarioButton = new MaterialSkin.Controls.MaterialButton();
-            propietariosGridView = new DataGridView();
-            añadirPropietarioButton = new MaterialSkin.Controls.MaterialButton();
-            panel11 = new Panel();
-            pictureBox8 = new PictureBox();
-            panel13 = new Panel();
             tabPage2 = new TabPage();
             inmueblesLayoutPanel = new FlowLayoutPanel();
             panel4 = new Panel();
-            panel3 = new Panel();
-            refreshButton = new PictureBox();
-            añadirInmuebleButton = new PictureBox();
             oficinaComboBox = new ComboBox();
+            añadirInmuebleButton = new PictureBox();
             label43 = new Label();
+            refreshButton = new PictureBox();
+            panel3 = new Panel();
             materialTabSelector3 = new MaterialSkin.Controls.MaterialTabSelector();
             tabPage3 = new TabPage();
             panel15 = new Panel();
@@ -56,59 +47,68 @@
             añadirOficinaButton = new MaterialSkin.Controls.MaterialButton();
             panel14 = new Panel();
             pictureBox9 = new PictureBox();
+            panel12 = new Panel();
+            materialTabSelector2 = new MaterialSkin.Controls.MaterialTabSelector();
+            tabPage1 = new TabPage();
+            panel16 = new Panel();
+            materialButton2 = new MaterialSkin.Controls.MaterialButton();
+            eliminarPropietarioButton = new MaterialSkin.Controls.MaterialButton();
+            propietariosGridView = new DataGridView();
+            añadirPropietarioButton = new MaterialSkin.Controls.MaterialButton();
+            panel11 = new Panel();
+            materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
+            panel13 = new Panel();
+            pictureBox8 = new PictureBox();
             tabPage4 = new TabPage();
-            tabPage5 = new TabPage();
-            panel1 = new Panel();
-            panel2 = new Panel();
-            panel5 = new Panel();
-            pictureBox1 = new PictureBox();
-            panel6 = new Panel();
-            pictureBox2 = new PictureBox();
             panel7 = new Panel();
             materialButton3 = new MaterialSkin.Controls.MaterialButton();
             materialButton4 = new MaterialSkin.Controls.MaterialButton();
             dataGridView1 = new DataGridView();
             materialButton5 = new MaterialSkin.Controls.MaterialButton();
+            panel5 = new Panel();
+            pictureBox1 = new PictureBox();
+            panel1 = new Panel();
+            materialTabSelector4 = new MaterialSkin.Controls.MaterialTabSelector();
+            tabPage5 = new TabPage();
             panel8 = new Panel();
             materialButton6 = new MaterialSkin.Controls.MaterialButton();
             materialButton7 = new MaterialSkin.Controls.MaterialButton();
             dataGridView2 = new DataGridView();
             materialButton8 = new MaterialSkin.Controls.MaterialButton();
-            panel12 = new Panel();
-            materialTabSelector2 = new MaterialSkin.Controls.MaterialTabSelector();
-            materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
-            materialTabSelector4 = new MaterialSkin.Controls.MaterialTabSelector();
+            panel6 = new Panel();
+            pictureBox2 = new PictureBox();
+            panel2 = new Panel();
             materialTabSelector5 = new MaterialSkin.Controls.MaterialTabSelector();
             materialTabControl1.SuspendLayout();
-            tabPage1.SuspendLayout();
-            panel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)propietariosGridView).BeginInit();
-            panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            panel13.SuspendLayout();
             tabPage2.SuspendLayout();
             panel4.SuspendLayout();
-            panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)refreshButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)añadirInmuebleButton).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)refreshButton).BeginInit();
+            panel3.SuspendLayout();
             tabPage3.SuspendLayout();
             panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)oficinasGridView).BeginInit();
             panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            panel12.SuspendLayout();
+            tabPage1.SuspendLayout();
+            panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)propietariosGridView).BeginInit();
+            panel11.SuspendLayout();
+            panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             tabPage4.SuspendLayout();
-            tabPage5.SuspendLayout();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel1.SuspendLayout();
+            tabPage5.SuspendLayout();
             panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            panel12.SuspendLayout();
+            panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // materialTabControl1
@@ -127,133 +127,6 @@
             materialTabControl1.SelectedIndex = 0;
             materialTabControl1.Size = new Size(1032, 732);
             materialTabControl1.TabIndex = 0;
-            // 
-            // tabPage1
-            // 
-            tabPage1.Controls.Add(panel16);
-            tabPage1.Controls.Add(panel11);
-            tabPage1.Controls.Add(panel13);
-            tabPage1.Location = new Point(4, 24);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Size = new Size(1024, 704);
-            tabPage1.TabIndex = 0;
-            tabPage1.Text = "Propietarios";
-            tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // panel16
-            // 
-            panel16.Controls.Add(materialButton2);
-            panel16.Controls.Add(eliminarPropietarioButton);
-            panel16.Controls.Add(propietariosGridView);
-            panel16.Controls.Add(añadirPropietarioButton);
-            panel16.Dock = DockStyle.Fill;
-            panel16.Location = new Point(0, 100);
-            panel16.Name = "panel16";
-            panel16.Size = new Size(1024, 528);
-            panel16.TabIndex = 6;
-            // 
-            // materialButton2
-            // 
-            materialButton2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton2.Cursor = Cursors.Hand;
-            materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            materialButton2.Depth = 0;
-            materialButton2.HighEmphasis = true;
-            materialButton2.Icon = null;
-            materialButton2.Location = new Point(766, 488);
-            materialButton2.Margin = new Padding(4, 6, 4, 6);
-            materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            materialButton2.Name = "materialButton2";
-            materialButton2.NoAccentTextColor = Color.Empty;
-            materialButton2.Size = new Size(71, 36);
-            materialButton2.TabIndex = 4;
-            materialButton2.Text = "Editar";
-            materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton2.UseAccentColor = false;
-            materialButton2.UseVisualStyleBackColor = true;
-            materialButton2.Click += materialButton2_Click;
-            // 
-            // eliminarPropietarioButton
-            // 
-            eliminarPropietarioButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            eliminarPropietarioButton.Cursor = Cursors.Hand;
-            eliminarPropietarioButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            eliminarPropietarioButton.Depth = 0;
-            eliminarPropietarioButton.HighEmphasis = true;
-            eliminarPropietarioButton.Icon = null;
-            eliminarPropietarioButton.Location = new Point(927, 488);
-            eliminarPropietarioButton.Margin = new Padding(4, 6, 4, 6);
-            eliminarPropietarioButton.MouseState = MaterialSkin.MouseState.HOVER;
-            eliminarPropietarioButton.Name = "eliminarPropietarioButton";
-            eliminarPropietarioButton.NoAccentTextColor = Color.Empty;
-            eliminarPropietarioButton.Size = new Size(88, 36);
-            eliminarPropietarioButton.TabIndex = 1;
-            eliminarPropietarioButton.Text = "Eliminar";
-            eliminarPropietarioButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            eliminarPropietarioButton.UseAccentColor = false;
-            eliminarPropietarioButton.UseVisualStyleBackColor = true;
-            eliminarPropietarioButton.Click += eliminarPropietarioButton_Click;
-            // 
-            // propietariosGridView
-            // 
-            propietariosGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            propietariosGridView.Location = new Point(8, 6);
-            propietariosGridView.Name = "propietariosGridView";
-            propietariosGridView.Size = new Size(1008, 473);
-            propietariosGridView.TabIndex = 0;
-            // 
-            // añadirPropietarioButton
-            // 
-            añadirPropietarioButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            añadirPropietarioButton.Cursor = Cursors.Hand;
-            añadirPropietarioButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            añadirPropietarioButton.Depth = 0;
-            añadirPropietarioButton.HighEmphasis = true;
-            añadirPropietarioButton.Icon = null;
-            añadirPropietarioButton.Location = new Point(845, 488);
-            añadirPropietarioButton.Margin = new Padding(4, 6, 4, 6);
-            añadirPropietarioButton.MouseState = MaterialSkin.MouseState.HOVER;
-            añadirPropietarioButton.Name = "añadirPropietarioButton";
-            añadirPropietarioButton.NoAccentTextColor = Color.Empty;
-            añadirPropietarioButton.Size = new Size(74, 36);
-            añadirPropietarioButton.TabIndex = 2;
-            añadirPropietarioButton.Text = "Añadir";
-            añadirPropietarioButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            añadirPropietarioButton.UseAccentColor = false;
-            añadirPropietarioButton.UseVisualStyleBackColor = true;
-            añadirPropietarioButton.Click += añadirPropietarioButton_Click;
-            // 
-            // panel11
-            // 
-            panel11.BackColor = Color.RoyalBlue;
-            panel11.Controls.Add(materialTabSelector1);
-            panel11.Dock = DockStyle.Top;
-            panel11.Location = new Point(0, 0);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(1024, 100);
-            panel11.TabIndex = 4;
-            // 
-            // pictureBox8
-            // 
-            pictureBox8.Cursor = Cursors.Hand;
-            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(55, 17);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(43, 40);
-            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox8.TabIndex = 10;
-            pictureBox8.TabStop = false;
-            pictureBox8.Click += pictureBox8_Click;
-            // 
-            // panel13
-            // 
-            panel13.BackColor = Color.RoyalBlue;
-            panel13.Controls.Add(pictureBox8);
-            panel13.Dock = DockStyle.Bottom;
-            panel13.Location = new Point(0, 628);
-            panel13.Name = "panel13";
-            panel13.Size = new Size(1024, 76);
-            panel13.TabIndex = 3;
             // 
             // tabPage2
             // 
@@ -289,40 +162,6 @@
             panel4.Size = new Size(1024, 100);
             panel4.TabIndex = 2;
             // 
-            // panel3
-            // 
-            panel3.BackColor = Color.RoyalBlue;
-            panel3.Controls.Add(materialTabSelector3);
-            panel3.Dock = DockStyle.Top;
-            panel3.Location = new Point(0, 0);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(1024, 100);
-            panel3.TabIndex = 1;
-            // 
-            // refreshButton
-            // 
-            refreshButton.Cursor = Cursors.Hand;
-            refreshButton.Image = (Image)resources.GetObject("refreshButton.Image");
-            refreshButton.Location = new Point(35, 33);
-            refreshButton.Name = "refreshButton";
-            refreshButton.Size = new Size(43, 40);
-            refreshButton.SizeMode = PictureBoxSizeMode.StretchImage;
-            refreshButton.TabIndex = 9;
-            refreshButton.TabStop = false;
-            refreshButton.Click += refreshButton_Click;
-            // 
-            // añadirInmuebleButton
-            // 
-            añadirInmuebleButton.Cursor = Cursors.Hand;
-            añadirInmuebleButton.Image = (Image)resources.GetObject("añadirInmuebleButton.Image");
-            añadirInmuebleButton.Location = new Point(114, 33);
-            añadirInmuebleButton.Name = "añadirInmuebleButton";
-            añadirInmuebleButton.Size = new Size(43, 40);
-            añadirInmuebleButton.SizeMode = PictureBoxSizeMode.StretchImage;
-            añadirInmuebleButton.TabIndex = 5;
-            añadirInmuebleButton.TabStop = false;
-            añadirInmuebleButton.Click += añadirInmuebleButton_Click;
-            // 
             // oficinaComboBox
             // 
             oficinaComboBox.Cursor = Cursors.Hand;
@@ -337,6 +176,18 @@
             oficinaComboBox.Size = new Size(88, 23);
             oficinaComboBox.TabIndex = 8;
             // 
+            // añadirInmuebleButton
+            // 
+            añadirInmuebleButton.Cursor = Cursors.Hand;
+            añadirInmuebleButton.Image = (Image)resources.GetObject("añadirInmuebleButton.Image");
+            añadirInmuebleButton.Location = new Point(114, 33);
+            añadirInmuebleButton.Name = "añadirInmuebleButton";
+            añadirInmuebleButton.Size = new Size(43, 40);
+            añadirInmuebleButton.SizeMode = PictureBoxSizeMode.StretchImage;
+            añadirInmuebleButton.TabIndex = 5;
+            añadirInmuebleButton.TabStop = false;
+            añadirInmuebleButton.Click += añadirInmuebleButton_Click;
+            // 
             // label43
             // 
             label43.AutoSize = true;
@@ -346,6 +197,28 @@
             label43.Size = new Size(61, 18);
             label43.TabIndex = 7;
             label43.Text = "Oficina";
+            // 
+            // refreshButton
+            // 
+            refreshButton.Cursor = Cursors.Hand;
+            refreshButton.Image = (Image)resources.GetObject("refreshButton.Image");
+            refreshButton.Location = new Point(35, 33);
+            refreshButton.Name = "refreshButton";
+            refreshButton.Size = new Size(43, 40);
+            refreshButton.SizeMode = PictureBoxSizeMode.StretchImage;
+            refreshButton.TabIndex = 9;
+            refreshButton.TabStop = false;
+            refreshButton.Click += refreshButton_Click;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.RoyalBlue;
+            panel3.Controls.Add(materialTabSelector3);
+            panel3.Dock = DockStyle.Top;
+            panel3.Location = new Point(0, 0);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1024, 100);
+            panel3.TabIndex = 1;
             // 
             // materialTabSelector3
             // 
@@ -478,6 +351,169 @@
             pictureBox9.TabStop = false;
             pictureBox9.Click += pictureBox9_Click;
             // 
+            // panel12
+            // 
+            panel12.BackColor = Color.RoyalBlue;
+            panel12.Controls.Add(materialTabSelector2);
+            panel12.Dock = DockStyle.Top;
+            panel12.Location = new Point(0, 0);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(1024, 100);
+            panel12.TabIndex = 2;
+            // 
+            // materialTabSelector2
+            // 
+            materialTabSelector2.BaseTabControl = materialTabControl1;
+            materialTabSelector2.CharacterCasing = MaterialSkin.Controls.MaterialTabSelector.CustomCharacterCasing.Normal;
+            materialTabSelector2.Depth = 0;
+            materialTabSelector2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialTabSelector2.Location = new Point(86, 52);
+            materialTabSelector2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialTabSelector2.Name = "materialTabSelector2";
+            materialTabSelector2.Size = new Size(845, 48);
+            materialTabSelector2.TabIndex = 2;
+            materialTabSelector2.Text = "materialTabSelector1";
+            // 
+            // tabPage1
+            // 
+            tabPage1.Controls.Add(panel16);
+            tabPage1.Controls.Add(panel11);
+            tabPage1.Controls.Add(panel13);
+            tabPage1.Location = new Point(4, 24);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Size = new Size(1024, 704);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "Propietarios";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // panel16
+            // 
+            panel16.Controls.Add(materialButton2);
+            panel16.Controls.Add(eliminarPropietarioButton);
+            panel16.Controls.Add(propietariosGridView);
+            panel16.Controls.Add(añadirPropietarioButton);
+            panel16.Dock = DockStyle.Fill;
+            panel16.Location = new Point(0, 100);
+            panel16.Name = "panel16";
+            panel16.Size = new Size(1024, 528);
+            panel16.TabIndex = 6;
+            // 
+            // materialButton2
+            // 
+            materialButton2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton2.Cursor = Cursors.Hand;
+            materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButton2.Depth = 0;
+            materialButton2.HighEmphasis = true;
+            materialButton2.Icon = null;
+            materialButton2.Location = new Point(766, 488);
+            materialButton2.Margin = new Padding(4, 6, 4, 6);
+            materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton2.Name = "materialButton2";
+            materialButton2.NoAccentTextColor = Color.Empty;
+            materialButton2.Size = new Size(71, 36);
+            materialButton2.TabIndex = 4;
+            materialButton2.Text = "Editar";
+            materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton2.UseAccentColor = false;
+            materialButton2.UseVisualStyleBackColor = true;
+            materialButton2.Click += materialButton2_Click;
+            // 
+            // eliminarPropietarioButton
+            // 
+            eliminarPropietarioButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            eliminarPropietarioButton.Cursor = Cursors.Hand;
+            eliminarPropietarioButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            eliminarPropietarioButton.Depth = 0;
+            eliminarPropietarioButton.HighEmphasis = true;
+            eliminarPropietarioButton.Icon = null;
+            eliminarPropietarioButton.Location = new Point(927, 488);
+            eliminarPropietarioButton.Margin = new Padding(4, 6, 4, 6);
+            eliminarPropietarioButton.MouseState = MaterialSkin.MouseState.HOVER;
+            eliminarPropietarioButton.Name = "eliminarPropietarioButton";
+            eliminarPropietarioButton.NoAccentTextColor = Color.Empty;
+            eliminarPropietarioButton.Size = new Size(88, 36);
+            eliminarPropietarioButton.TabIndex = 1;
+            eliminarPropietarioButton.Text = "Eliminar";
+            eliminarPropietarioButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            eliminarPropietarioButton.UseAccentColor = false;
+            eliminarPropietarioButton.UseVisualStyleBackColor = true;
+            eliminarPropietarioButton.Click += eliminarPropietarioButton_Click;
+            // 
+            // propietariosGridView
+            // 
+            propietariosGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            propietariosGridView.Location = new Point(8, 6);
+            propietariosGridView.Name = "propietariosGridView";
+            propietariosGridView.Size = new Size(1008, 473);
+            propietariosGridView.TabIndex = 0;
+            // 
+            // añadirPropietarioButton
+            // 
+            añadirPropietarioButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            añadirPropietarioButton.Cursor = Cursors.Hand;
+            añadirPropietarioButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            añadirPropietarioButton.Depth = 0;
+            añadirPropietarioButton.HighEmphasis = true;
+            añadirPropietarioButton.Icon = null;
+            añadirPropietarioButton.Location = new Point(845, 488);
+            añadirPropietarioButton.Margin = new Padding(4, 6, 4, 6);
+            añadirPropietarioButton.MouseState = MaterialSkin.MouseState.HOVER;
+            añadirPropietarioButton.Name = "añadirPropietarioButton";
+            añadirPropietarioButton.NoAccentTextColor = Color.Empty;
+            añadirPropietarioButton.Size = new Size(74, 36);
+            añadirPropietarioButton.TabIndex = 2;
+            añadirPropietarioButton.Text = "Añadir";
+            añadirPropietarioButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            añadirPropietarioButton.UseAccentColor = false;
+            añadirPropietarioButton.UseVisualStyleBackColor = true;
+            añadirPropietarioButton.Click += añadirPropietarioButton_Click;
+            // 
+            // panel11
+            // 
+            panel11.BackColor = Color.RoyalBlue;
+            panel11.Controls.Add(materialTabSelector1);
+            panel11.Dock = DockStyle.Top;
+            panel11.Location = new Point(0, 0);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(1024, 100);
+            panel11.TabIndex = 4;
+            // 
+            // materialTabSelector1
+            // 
+            materialTabSelector1.BaseTabControl = materialTabControl1;
+            materialTabSelector1.CharacterCasing = MaterialSkin.Controls.MaterialTabSelector.CustomCharacterCasing.Normal;
+            materialTabSelector1.Depth = 0;
+            materialTabSelector1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialTabSelector1.Location = new Point(86, 52);
+            materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialTabSelector1.Name = "materialTabSelector1";
+            materialTabSelector1.Size = new Size(845, 48);
+            materialTabSelector1.TabIndex = 2;
+            materialTabSelector1.Text = "materialTabSelector1";
+            // 
+            // panel13
+            // 
+            panel13.BackColor = Color.RoyalBlue;
+            panel13.Controls.Add(pictureBox8);
+            panel13.Dock = DockStyle.Bottom;
+            panel13.Location = new Point(0, 628);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(1024, 76);
+            panel13.TabIndex = 3;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.Cursor = Cursors.Hand;
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
+            pictureBox8.Location = new Point(55, 17);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(43, 40);
+            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox8.TabIndex = 10;
+            pictureBox8.TabStop = false;
+            pictureBox8.Click += pictureBox8_Click;
+            // 
             // tabPage4
             // 
             tabPage4.Controls.Add(panel7);
@@ -489,80 +525,6 @@
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Clientes";
             tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            tabPage5.Controls.Add(panel8);
-            tabPage5.Controls.Add(panel6);
-            tabPage5.Controls.Add(panel2);
-            tabPage5.Location = new Point(4, 24);
-            tabPage5.Name = "tabPage5";
-            tabPage5.Size = new Size(1024, 704);
-            tabPage5.TabIndex = 4;
-            tabPage5.Text = "Visitas";
-            tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.RoyalBlue;
-            panel1.Controls.Add(materialTabSelector4);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1024, 100);
-            panel1.TabIndex = 5;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.RoyalBlue;
-            panel2.Controls.Add(materialTabSelector5);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1024, 100);
-            panel2.TabIndex = 5;
-            // 
-            // panel5
-            // 
-            panel5.BackColor = Color.RoyalBlue;
-            panel5.Controls.Add(pictureBox1);
-            panel5.Dock = DockStyle.Bottom;
-            panel5.Location = new Point(0, 628);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(1024, 76);
-            panel5.TabIndex = 6;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Cursor = Cursors.Hand;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(55, 18);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(43, 40);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 11;
-            pictureBox1.TabStop = false;
-            // 
-            // panel6
-            // 
-            panel6.BackColor = Color.RoyalBlue;
-            panel6.Controls.Add(pictureBox2);
-            panel6.Dock = DockStyle.Bottom;
-            panel6.Location = new Point(0, 628);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(1024, 76);
-            panel6.TabIndex = 6;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Cursor = Cursors.Hand;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(55, 18);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(43, 40);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 11;
-            pictureBox2.TabStop = false;
             // 
             // panel7
             // 
@@ -595,6 +557,7 @@
             materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             materialButton3.UseAccentColor = false;
             materialButton3.UseVisualStyleBackColor = true;
+            materialButton3.Click += materialButton3_Click;
             // 
             // materialButton4
             // 
@@ -615,6 +578,7 @@
             materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             materialButton4.UseAccentColor = false;
             materialButton4.UseVisualStyleBackColor = true;
+            materialButton4.Click += materialButton4_Click;
             // 
             // dataGridView1
             // 
@@ -623,6 +587,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(1008, 473);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // materialButton5
             // 
@@ -643,6 +608,64 @@
             materialButton5.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             materialButton5.UseAccentColor = false;
             materialButton5.UseVisualStyleBackColor = true;
+            materialButton5.Click += materialButton5_Click;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.RoyalBlue;
+            panel5.Controls.Add(pictureBox1);
+            panel5.Dock = DockStyle.Bottom;
+            panel5.Location = new Point(0, 628);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(1024, 76);
+            panel5.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Cursor = Cursors.Hand;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(55, 18);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(43, 40);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 11;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.RoyalBlue;
+            panel1.Controls.Add(materialTabSelector4);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1024, 100);
+            panel1.TabIndex = 5;
+            // 
+            // materialTabSelector4
+            // 
+            materialTabSelector4.BaseTabControl = materialTabControl1;
+            materialTabSelector4.CharacterCasing = MaterialSkin.Controls.MaterialTabSelector.CustomCharacterCasing.Normal;
+            materialTabSelector4.Depth = 0;
+            materialTabSelector4.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialTabSelector4.Location = new Point(86, 52);
+            materialTabSelector4.MouseState = MaterialSkin.MouseState.HOVER;
+            materialTabSelector4.Name = "materialTabSelector4";
+            materialTabSelector4.Size = new Size(845, 48);
+            materialTabSelector4.TabIndex = 2;
+            materialTabSelector4.Text = "materialTabSelector1";
+            // 
+            // tabPage5
+            // 
+            tabPage5.Controls.Add(panel8);
+            tabPage5.Controls.Add(panel6);
+            tabPage5.Controls.Add(panel2);
+            tabPage5.Location = new Point(4, 24);
+            tabPage5.Name = "tabPage5";
+            tabPage5.Size = new Size(1024, 704);
+            tabPage5.TabIndex = 4;
+            tabPage5.Text = "Visitas";
+            tabPage5.UseVisualStyleBackColor = true;
             // 
             // panel8
             // 
@@ -724,54 +747,36 @@
             materialButton8.UseAccentColor = false;
             materialButton8.UseVisualStyleBackColor = true;
             // 
-            // panel12
+            // panel6
             // 
-            panel12.BackColor = Color.RoyalBlue;
-            panel12.Controls.Add(materialTabSelector2);
-            panel12.Dock = DockStyle.Top;
-            panel12.Location = new Point(0, 0);
-            panel12.Name = "panel12";
-            panel12.Size = new Size(1024, 100);
-            panel12.TabIndex = 2;
+            panel6.BackColor = Color.RoyalBlue;
+            panel6.Controls.Add(pictureBox2);
+            panel6.Dock = DockStyle.Bottom;
+            panel6.Location = new Point(0, 628);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(1024, 76);
+            panel6.TabIndex = 6;
             // 
-            // materialTabSelector2
+            // pictureBox2
             // 
-            materialTabSelector2.BaseTabControl = materialTabControl1;
-            materialTabSelector2.CharacterCasing = MaterialSkin.Controls.MaterialTabSelector.CustomCharacterCasing.Normal;
-            materialTabSelector2.Depth = 0;
-            materialTabSelector2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTabSelector2.Location = new Point(86, 52);
-            materialTabSelector2.MouseState = MaterialSkin.MouseState.HOVER;
-            materialTabSelector2.Name = "materialTabSelector2";
-            materialTabSelector2.Size = new Size(845, 48);
-            materialTabSelector2.TabIndex = 2;
-            materialTabSelector2.Text = "materialTabSelector1";
+            pictureBox2.Cursor = Cursors.Hand;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(55, 18);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(43, 40);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 11;
+            pictureBox2.TabStop = false;
             // 
-            // materialTabSelector1
+            // panel2
             // 
-            materialTabSelector1.BaseTabControl = materialTabControl1;
-            materialTabSelector1.CharacterCasing = MaterialSkin.Controls.MaterialTabSelector.CustomCharacterCasing.Normal;
-            materialTabSelector1.Depth = 0;
-            materialTabSelector1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTabSelector1.Location = new Point(86, 52);
-            materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialTabSelector1.Name = "materialTabSelector1";
-            materialTabSelector1.Size = new Size(845, 48);
-            materialTabSelector1.TabIndex = 2;
-            materialTabSelector1.Text = "materialTabSelector1";
-            // 
-            // materialTabSelector4
-            // 
-            materialTabSelector4.BaseTabControl = materialTabControl1;
-            materialTabSelector4.CharacterCasing = MaterialSkin.Controls.MaterialTabSelector.CustomCharacterCasing.Normal;
-            materialTabSelector4.Depth = 0;
-            materialTabSelector4.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTabSelector4.Location = new Point(86, 52);
-            materialTabSelector4.MouseState = MaterialSkin.MouseState.HOVER;
-            materialTabSelector4.Name = "materialTabSelector4";
-            materialTabSelector4.Size = new Size(845, 48);
-            materialTabSelector4.TabIndex = 2;
-            materialTabSelector4.Text = "materialTabSelector1";
+            panel2.BackColor = Color.RoyalBlue;
+            panel2.Controls.Add(materialTabSelector5);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1024, 100);
+            panel2.TabIndex = 5;
             // 
             // materialTabSelector5
             // 
@@ -798,40 +803,40 @@
             Text = "Página Principal";
             Load += AdminMainPage_Load;
             materialTabControl1.ResumeLayout(false);
-            tabPage1.ResumeLayout(false);
-            panel16.ResumeLayout(false);
-            panel16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)propietariosGridView).EndInit();
-            panel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            panel13.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
-            panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)refreshButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)añadirInmuebleButton).EndInit();
+            ((System.ComponentModel.ISupportInitialize)refreshButton).EndInit();
+            panel3.ResumeLayout(false);
             tabPage3.ResumeLayout(false);
             panel15.ResumeLayout(false);
             panel15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)oficinasGridView).EndInit();
             panel14.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            panel12.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            panel16.ResumeLayout(false);
+            panel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)propietariosGridView).EndInit();
+            panel11.ResumeLayout(false);
+            panel13.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             tabPage4.ResumeLayout(false);
-            tabPage5.ResumeLayout(false);
-            panel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel1.ResumeLayout(false);
+            tabPage5.ResumeLayout(false);
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            panel12.ResumeLayout(false);
+            panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 

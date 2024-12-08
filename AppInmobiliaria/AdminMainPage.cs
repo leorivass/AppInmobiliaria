@@ -19,11 +19,13 @@ namespace Presentation
 {
     public partial class adminPage : Form
     {
+
         public adminPage()
         {
             InitializeComponent();
             CargarOficinas();
-            CargarPropiedades();    
+            CargarPropiedades();
+
         }
         public void AddPropertyCard(string tipo, string precioVenta, string precioAlquiler, string referencia, string imagenPropiedad)
         {
@@ -40,11 +42,15 @@ namespace Presentation
                 byte[] imageBytes = client.DownloadData(imagenPropiedad);
                 using (MemoryStream stream = new MemoryStream(imageBytes))
                 {
-                    card.ImagenPropiedad = Image.FromStream(stream); 
+                    card.ImagenPropiedad = Image.FromStream(stream);
                 }
             }
+<<<<<<< HEAD
 
-            inmueblesLayoutPanel.Controls.Add(card); 
+            inmueblesLayoutPanel.Controls.Add(card);
+=======
+                inmueblesLayoutPanel.Controls.Add(card); 
+>>>>>>> 8595436246196e34af0f2eabf1304eebced69b70
         }
 
         private void CargarOficinas()
@@ -111,9 +117,45 @@ namespace Presentation
                     }
                 }
 
+                card.Click += (s, e) => AbrirFicha(propiedad);
                 inmueblesLayoutPanel.Controls.Add(card);
             }
         }
+
+        private void AbrirFicha(PropiedadCompleta propiedad)
+        {
+            Form VerFicha;
+
+            switch (propiedad.tipo)
+            {
+                case "Casa":
+                    VerFicha = new FichaCasa();
+                    ((FichaCasa)VerFicha).EnviarDatosCasa(propiedad);
+                    break;
+
+                case "Piso":
+                    VerFicha = new FichaPiso();
+                    ((FichaPiso)VerFicha).EnviarDatosPiso(propiedad);
+                    break;
+
+                case "Villa":
+                    VerFicha = new FichaVilla();
+                    ((FichaVilla)VerFicha).EnviarDatosVilla(propiedad);
+                    break;
+
+                case "Local":
+                    VerFicha = new FichaLocal();
+                    ((FichaLocal)VerFicha).EnviarDatosLocal(propiedad);
+                    break;
+
+                default:
+                    MessageBox.Show($"No se encontró un formulario para el tipo {propiedad.tipo}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+            }
+
+            VerFicha.ShowDialog();
+        }
+
 
         private void refreshButton_Click(object sender, EventArgs e)
         {
@@ -147,6 +189,9 @@ namespace Presentation
             oficina.CargarOficinas(oficinasGridView);
             propietariosGridView.ReadOnly = false;
             oficinasGridView.ReadOnly = false;
+            Cliente cliente = new Cliente();
+            cliente.CargarClientes(dataGridView1);
+            dataGridView1.ReadOnly = false;
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
@@ -208,7 +253,7 @@ namespace Presentation
 
         {
             Propietario propietario = new Propietario();
-            if (propietariosGridView.SelectedRows.Count > 0)
+
             {
                 try
                 {
@@ -246,25 +291,73 @@ namespace Presentation
         private void materialButton1_Click(object sender, EventArgs e)
         {
             Oficina oficina = new Oficina();
-           
+
+            try
+            {
+                if (oficinasGridView.SelectedRows.Count > 0)
+                {
+
+                    DataGridViewRow selectedRow = oficinasGridView.SelectedRows[0];
+
+
+                    int id = Convert.ToInt32(selectedRow.Cells["id"].Value);
+                    string ubicacion = selectedRow.Cells["ubicacion"].Value.ToString();
+                    string telefono = selectedRow.Cells["telefono"].Value.ToString();
+
+
+
+                    Oficina.EditOficina(id, ubicacion, telefono);
+
+
+                    MessageBox.Show("Oficina actualizada correctamente.");
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, selecciona una fila para editar.");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al actualizar oficina: " + ex.Message);
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void materialButton5_Click(object sender, EventArgs e)
+        {
+            AñadirCliente añadircliente = new AñadirCliente();
+            añadircliente.ShowDialog();
+        }
+
+        private void materialButton3_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = new Cliente();
+
+            {
                 try
                 {
-                    if (oficinasGridView.SelectedRows.Count > 0)
+                    if (dataGridView1.SelectedRows.Count > 0)
                     {
 
-                        DataGridViewRow selectedRow = oficinasGridView.SelectedRows[0];
+                        DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
 
 
                         int id = Convert.ToInt32(selectedRow.Cells["id"].Value);
-                        string ubicacion = selectedRow.Cells["ubicacion"].Value.ToString();
+                        string nombre = selectedRow.Cells["nombre"].Value.ToString();
                         string telefono = selectedRow.Cells["telefono"].Value.ToString();
-                        
+                        string correo = selectedRow.Cells["correo"].Value.ToString();
+                        string cedula = selectedRow.Cells["cedula"].Value.ToString();
 
 
-                        Oficina.EditOficina(id, ubicacion, telefono);
+                        Cliente.EditCliente(id, nombre, telefono, correo, cedula);
 
 
-                        MessageBox.Show("Oficina actualizada correctamente.");
+                        MessageBox.Show("Cliente actualizado correctamente.");
                     }
                     else
                     {
@@ -274,11 +367,38 @@ namespace Presentation
                 catch (Exception ex)
                 {
 
-                    MessageBox.Show("Error al actualizar oficina: " + ex.Message);
+                    MessageBox.Show("Error al actualizar el cliente: " + ex.Message);
                 }
             }
         }
+
+        private void materialButton4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Cliente cliente = new Cliente();
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+                int id = Convert.ToInt32(selectedRow.Cells["ID"].Value);
+
+
+                cliente.DeleteCliente(id);
+                MessageBox.Show("Cliente eliminado correctamente.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar el cliente: " + ex.Message);
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = new Cliente();
+            cliente.CargarClientes(dataGridView1);
+        }
     }
+}
+
 
 
 

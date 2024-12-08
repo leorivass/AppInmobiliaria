@@ -131,6 +131,7 @@
             cedulaPropietario.TextAlign = HorizontalAlignment.Left;
             cedulaPropietario.TrailingIcon = null;
             cedulaPropietario.UseSystemPasswordChar = false;
+          //  cedulaPropietario.Click += this.cedulaPropietario_Click;
             cedulaPropietario.TextChanged += cedulaPropietario_TextChanged;
             // 
             // correoPropietario
@@ -161,6 +162,7 @@
             correoPropietario.TextAlign = HorizontalAlignment.Left;
             correoPropietario.TrailingIcon = null;
             correoPropietario.UseSystemPasswordChar = false;
+            //correoPropietario.Click += this.correoPropietario_Click;
             // 
             // telefonoPropietario
             // 
@@ -190,6 +192,7 @@
             telefonoPropietario.TextAlign = HorizontalAlignment.Left;
             telefonoPropietario.TrailingIcon = null;
             telefonoPropietario.UseSystemPasswordChar = false;
+           // telefonoPropietario.Click += this.telefonoPropietario_Click;
             telefonoPropietario.TextChanged += telefonoPropietario_TextChanged;
             // 
             // nombrePropietario
@@ -220,6 +223,7 @@
             nombrePropietario.TextAlign = HorizontalAlignment.Left;
             nombrePropietario.TrailingIcon = null;
             nombrePropietario.UseSystemPasswordChar = false;
+          //  nombrePropietario.Click += this.nombrePropietario_Click;
             // 
             // label1
             // 
@@ -230,6 +234,7 @@
             label1.Size = new Size(275, 37);
             label1.TabIndex = 0;
             label1.Text = "Datos del propietario";
+            label1.Click += label1_Click;
             // 
             // AñadirPropietario
             // 
