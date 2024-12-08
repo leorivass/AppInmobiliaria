@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            panel2 = new Panel();
+            label1 = new Label();
             materialTextBox29 = new MaterialSkin.Controls.MaterialTextBox2();
             materialCheckedListBox1 = new MaterialSkin.Controls.MaterialCheckedListBox();
             materialCheckbox4 = new MaterialSkin.Controls.MaterialCheckbox();
             materialCheckbox3 = new MaterialSkin.Controls.MaterialCheckbox();
             materialCheckbox2 = new MaterialSkin.Controls.MaterialCheckbox();
             materialCheckbox1 = new MaterialSkin.Controls.MaterialCheckbox();
-            label1 = new Label();
             materialTextBox21 = new MaterialSkin.Controls.MaterialTextBox2();
             materialTextBox211 = new MaterialSkin.Controls.MaterialTextBox2();
             materialTextBox22 = new MaterialSkin.Controls.MaterialTextBox2();
@@ -46,15 +47,21 @@
             materialTextBox27 = new MaterialSkin.Controls.MaterialTextBox2();
             materialTextBox25 = new MaterialSkin.Controls.MaterialTextBox2();
             materialTextBox26 = new MaterialSkin.Controls.MaterialTextBox2();
+            label2 = new Label();
+            dataGridView1 = new DataGridView();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             materialCheckedListBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(dataGridView1);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(panel2);
             panel1.Controls.Add(materialTextBox29);
             panel1.Controls.Add(materialCheckedListBox1);
-            panel1.Controls.Add(label1);
             panel1.Controls.Add(materialTextBox21);
             panel1.Controls.Add(materialTextBox211);
             panel1.Controls.Add(materialTextBox22);
@@ -68,8 +75,27 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(734, 592);
+            panel1.Size = new Size(734, 761);
             panel1.TabIndex = 14;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.LightCoral;
+            panel2.Controls.Add(label1);
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(734, 67);
+            panel2.TabIndex = 20;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Lucida Fax", 20F);
+            label1.Location = new Point(322, 18);
+            label1.Name = "label1";
+            label1.Size = new Size(96, 32);
+            label1.TabIndex = 0;
+            label1.Text = "label1";
             // 
             // materialTextBox29
             // 
@@ -82,7 +108,7 @@
             materialTextBox29.HideSelection = true;
             materialTextBox29.Hint = "Zona";
             materialTextBox29.LeadingIcon = null;
-            materialTextBox29.Location = new Point(44, 520);
+            materialTextBox29.Location = new Point(419, 364);
             materialTextBox29.MaxLength = 32767;
             materialTextBox29.MouseState = MaterialSkin.MouseState.OUT;
             materialTextBox29.Name = "materialTextBox29";
@@ -111,10 +137,10 @@
             materialCheckedListBox1.Controls.Add(materialCheckbox2);
             materialCheckedListBox1.Controls.Add(materialCheckbox1);
             materialCheckedListBox1.Depth = 0;
-            materialCheckedListBox1.Location = new Point(358, 364);
+            materialCheckedListBox1.Location = new Point(345, 433);
             materialCheckedListBox1.MouseState = MaterialSkin.MouseState.HOVER;
             materialCheckedListBox1.Name = "materialCheckedListBox1";
-            materialCheckedListBox1.Size = new Size(351, 107);
+            materialCheckedListBox1.Size = new Size(364, 54);
             materialCheckedListBox1.Striped = false;
             materialCheckedListBox1.StripeDarkColor = Color.Empty;
             materialCheckedListBox1.TabIndex = 13;
@@ -124,7 +150,7 @@
             materialCheckbox4.AutoSize = true;
             materialCheckbox4.Depth = 0;
             materialCheckbox4.Enabled = false;
-            materialCheckbox4.Location = new Point(114, 63);
+            materialCheckbox4.Location = new Point(88, 11);
             materialCheckbox4.Margin = new Padding(0);
             materialCheckbox4.MouseLocation = new Point(-1, -1);
             materialCheckbox4.MouseState = MaterialSkin.MouseState.HOVER;
@@ -141,7 +167,7 @@
             materialCheckbox3.AutoSize = true;
             materialCheckbox3.Depth = 0;
             materialCheckbox3.Enabled = false;
-            materialCheckbox3.Location = new Point(137, 11);
+            materialCheckbox3.Location = new Point(207, 11);
             materialCheckbox3.Margin = new Padding(0);
             materialCheckbox3.MouseLocation = new Point(-1, -1);
             materialCheckbox3.MouseState = MaterialSkin.MouseState.HOVER;
@@ -158,7 +184,7 @@
             materialCheckbox2.AutoSize = true;
             materialCheckbox2.Depth = 0;
             materialCheckbox2.Enabled = false;
-            materialCheckbox2.Location = new Point(251, 11);
+            materialCheckbox2.Location = new Point(270, 11);
             materialCheckbox2.Margin = new Padding(0);
             materialCheckbox2.MouseLocation = new Point(-1, -1);
             materialCheckbox2.MouseState = MaterialSkin.MouseState.HOVER;
@@ -186,16 +212,6 @@
             materialCheckbox1.TabIndex = 0;
             materialCheckbox1.Text = "Salón";
             materialCheckbox1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Lucida Fax", 20F);
-            label1.Location = new Point(310, 25);
-            label1.Name = "label1";
-            label1.Size = new Size(96, 32);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
             // 
             // materialTextBox21
             // 
@@ -507,25 +523,45 @@
             materialTextBox26.TrailingIcon = null;
             materialTextBox26.UseSystemPasswordChar = false;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Lucida Fax", 20F);
+            label2.Location = new Point(308, 503);
+            label2.Name = "label2";
+            label2.Size = new Size(105, 32);
+            label2.TabIndex = 21;
+            label2.Text = "Visitas";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(44, 545);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(625, 191);
+            dataGridView1.TabIndex = 22;
+            // 
             // FichaPiso
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(734, 592);
+            ClientSize = new Size(734, 761);
             Controls.Add(panel1);
             Name = "FichaPiso";
             Text = "FichaPiso";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             materialCheckedListBox1.ResumeLayout(false);
             materialCheckedListBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private Label label1;
         private MaterialSkin.Controls.MaterialTextBox2 materialTextBox21;
         private MaterialSkin.Controls.MaterialTextBox2 materialTextBox211;
         private MaterialSkin.Controls.MaterialTextBox2 materialTextBox22;
@@ -542,5 +578,9 @@
         private MaterialSkin.Controls.MaterialCheckbox materialCheckbox3;
         private MaterialSkin.Controls.MaterialCheckbox materialCheckbox2;
         private MaterialSkin.Controls.MaterialCheckbox materialCheckbox1;
+        private Panel panel2;
+        private Label label1;
+        private DataGridView dataGridView1;
+        private Label label2;
     }
 }
