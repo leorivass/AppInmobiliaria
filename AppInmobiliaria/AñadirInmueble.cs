@@ -1,6 +1,5 @@
 ﻿using BusinessLogic;
-using System.Configuration;
-using Azure.Storage.Blobs;
+using DataAccess;
 
 using System;
 using System.Collections.Generic;
@@ -18,12 +17,10 @@ namespace Presentation
 {
     public partial class AñadirInmueble : Form
     {
-        private string office;
-        private string imagePath = string.Empty;
-        private string blobConnectionString = ConfigurationManager.ConnectionStrings["BLOBString"].ConnectionString;
-        private string container = "estateimages";
-        private adminPage mainpage;
-
+        DA dA = new DA();
+        private readonly string office;
+        private readonly adminPage mainpage;
+    
         public AñadirInmueble(adminPage mainpage)
         {
             InitializeComponent();
@@ -31,37 +28,6 @@ namespace Presentation
             CargarPropietarios();
             casaPanel.Visible = true;
             this.mainpage = mainpage;
-        }
-        private string subirImagenAzure()
-        {
-            try
-            {
-                // Crear un cliente de blob para el contenedor
-                BlobServiceClient blobServiceClient = new BlobServiceClient(blobConnectionString);
-                BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(container);
-
-                // Asegurarse de que el contenedor exista
-                containerClient.CreateIfNotExists();
-
-                // Obtener el nombre del archivo
-                string nombreArchivo = Path.GetFileName(imagePath);
-
-                // Crear un cliente para el blob
-                BlobClient blobClient = containerClient.GetBlobClient(nombreArchivo);
-
-                // Subir el archivo
-                using (FileStream stream = File.OpenRead(imagePath))
-                {
-                    blobClient.Upload(stream, true);
-                }
-
-                // Devolver la URL pública del blob
-                return blobClient.Uri.ToString();
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
         }
         private void subirImagenButton_Click(object sender, EventArgs e)
         {
@@ -71,11 +37,10 @@ namespace Presentation
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                imagePath = openFileDialog.FileName;
-                imagenInmueble.Image = Image.FromFile(imagePath);
+                dA.imagePath = openFileDialog.FileName;
+                imagenInmueble.Image = Image.FromFile(dA.imagePath);
                 imagenInmueble.SizeMode = PictureBoxSizeMode.StretchImage;
             }
-
         }
         private void CargarOficinas()
         {
@@ -149,7 +114,7 @@ namespace Presentation
                 inmueble.precio_alquiler = float.Parse(precioAlquiler.Text);
                 inmueble.direccion = direccion.Text;
                 inmueble.metros_cuadrados = float.Parse(area.Text);
-                inmueble.ruta_foto = subirImagenAzure();
+                inmueble.ruta_foto = dA.subirImagenAzure();
 
                 int idInmueble = inmueble.Add();
 
